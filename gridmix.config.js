@@ -1,12 +1,22 @@
 const nodeExternals = require('webpack-node-externals')
 
 module.exports = {
-  siteName: 'Gridsome',
-  siteUrl: `https://gridsome.org`,
-  titleTemplate: '%s - Gridsome',
-  siteDescription: 'Gridsome is a free & open source Vue.js-powered framework for building websites & apps that are fast by default 🚀.',
+  siteName: 'Gridmix',
+  siteUrl: `https://gridmix.github.io/`,
+  titleTemplate: '%s - Gridmix',
+  siteDescription: 'Gridmix is a free & open source Vue.js-powered framework for building websites & apps that are fast by default 🚀.',
 
   chainWebpack(config, { isServer }) {
+    // --- Gridmix ERRATA: silence harmless sass.dart.js "Critical dependency" warning ---
+    config.merge({
+      ignoreWarnings: [
+        {
+          module: /node_modules[/\\]sass[/\\]sass\.dart\.js/,
+          message: /Critical dependency/
+        }
+      ]
+    })
+
     config.module.rules.delete('svg')
     config.module.rule('svg')
       .test(/\.svg$/)
@@ -38,14 +48,15 @@ module.exports = {
   },
 
   plugins: [
-    {
-      use: '@gridsome/plugin-google-analytics',
+    /** TODO: resurrect properly */
+    /*{
+      use: '@gridmix/plugin-google-analytics',
       options: {
         id: 'UA-127625720-1'
       }
-    },
+    },*/
     {
-      use: '@gridsome/plugin-critical',
+      use: '@gridmix/plugin-critical',
       options: {
         paths: ['/'],
         width: 1300,
@@ -53,7 +64,7 @@ module.exports = {
       }
     },
     {
-      use: '@gridsome/vue-remark',
+      use: '@gridmix/vue-remark',
       options: {
         index: ['README'],
         baseDir: './docs',
@@ -61,7 +72,7 @@ module.exports = {
         typeName: 'DocPage',
         template: './src/templates/DocPage.vue',
         plugins: [
-          '@gridsome/remark-prismjs'
+          '@gridmix/remark-prismjs'
         ],
         remark: {
           autolinkHeadings: {
@@ -74,19 +85,19 @@ module.exports = {
       }
     },
     {
-      use: '@gridsome/source-filesystem',
+      use: '@gridmix/source-filesystem',
       options: {
         path: 'examples/*.md',
         typeName: 'Example',
         remark: {
           plugins: [
-            '@gridsome/remark-prismjs'
+            '@gridmix/remark-prismjs'
           ]
         }
       }
     },
     {
-      use: '@gridsome/source-filesystem',
+      use: '@gridmix/source-filesystem',
       options: {
         typeName: 'BlogPost',
         path: './blog/*/index.md',
@@ -95,10 +106,25 @@ module.exports = {
         },
         remark: {
           plugins: [
-            '@gridsome/remark-prismjs'
+            '@gridmix/remark-prismjs'
           ]
         }
       }
     }
-  ]
+  ],
+
+  css: {
+    loaderOptions: {
+      scss: {
+        implementation: require('sass')
+      },
+      sass: {
+        implementation: require('sass'),
+        sassOptions: {
+          indentedSyntax: true
+        }
+      }
+    }
+  }
+
 }
