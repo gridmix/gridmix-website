@@ -43,8 +43,11 @@ module.exports = {
     BlogPost: '/blog/:year/:month/:day/:slug',
     Contributor: '/contributor/:id',
     Starter: '/starters/:title',
-    Platform: '/starters/platform/:id',
-    Example: node => node.path
+    Platform: '/starters/platform/:id'
+    // NOTE: no `Example` template — examples are rendered inline by
+    // src/components/Examples.vue via the `allExample` static-query, not as
+    // standalone pages, and there is no src/templates/Example.vue. Declaring a
+    // template here makes `gridmix build` fail requiring that component.
   },
 
   plugins: [
