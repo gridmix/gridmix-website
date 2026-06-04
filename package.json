@@ -10,11 +10,11 @@
     "markdown:fix": "markdownlint '**/*.md' --ignore node_modules --fix"
   },
   "dependencies": {
-    "@gridmix/plugin-google-analytics": "link:../gridmix/packages/plugin-google-analytics",
+    "@gridmix/plugin-google-analytics": "0.2.0-alpha.0",
     "algoliasearch": "^3.32.0",
     "clipboard-copy": "^3.0.0",
     "docsearch.js": "^2.6.2",
-    "gridmix": "link:../gridmix/gridmix",
+    "gridmix": "0.8.0-alpha.0",
     "marked": "^0.7.0",
     "prismjs": "^1.30.0",
     "typography": "^0.16.18",
@@ -24,11 +24,11 @@
     "vue-scrollto": "^2.13.0"
   },
   "devDependencies": {
-    "@gridmix/plugin-critical": "link:../gridmix/packages/plugin-critical",
-    "@gridmix/remark-prismjs": "link:../gridmix/packages/remark-prismjs",
-    "@gridmix/source-filesystem": "link:../gridmix/packages/source-filesystem",
-    "@gridmix/transformer-remark": "link:../gridmix/packages/transformer-remark",
-    "@gridmix/vue-remark": "link:../gridmix/packages/vue-remark",
+    "@gridmix/plugin-critical": "0.3.0-alpha.0",
+    "@gridmix/remark-prismjs": "0.6.0-alpha.0",
+    "@gridmix/source-filesystem": "0.7.0-alpha.0",
+    "@gridmix/transformer-remark": "0.7.0-alpha.0",
+    "@gridmix/vue-remark": "0.3.0-alpha.0",
     "execa": "^4.0.2",
     "fs-extra": "^11.2.0",
     "js-yaml": "^3.14.0",
