@@ -1,12 +1,22 @@
 const nodeExternals = require('webpack-node-externals')
 
 module.exports = {
-  siteName: 'Gridsome',
-  siteUrl: `https://gridsome.org`,
-  titleTemplate: '%s - Gridsome',
-  siteDescription: 'Gridsome is a free & open source Vue.js-powered framework for building websites & apps that are fast by default 🚀.',
+  siteName: 'Gridmix',
+  siteUrl: `https://gridmix.github.io/`,
+  titleTemplate: '%s - Gridmix',
+  siteDescription: 'Gridmix is a free & open source Vue.js-powered framework for building websites & apps that are fast by default 🚀.',
 
   chainWebpack(config, { isServer }) {
+    // --- Gridmix ERRATA: silence harmless sass.dart.js "Critical dependency" warning ---
+    config.merge({
+      ignoreWarnings: [
+        {
+          module: /node_modules[/\\]sass[/\\]sass\.dart\.js/,
+          message: /Critical dependency/
+        }
+      ]
+    })
+
     config.module.rules.delete('svg')
     config.module.rule('svg')
       .test(/\.svg$/)
@@ -33,19 +43,23 @@ module.exports = {
     BlogPost: '/blog/:year/:month/:day/:slug',
     Contributor: '/contributor/:id',
     Starter: '/starters/:title',
-    Platform: '/starters/platform/:id',
-    Example: node => node.path
+    Platform: '/starters/platform/:id'
+    // NOTE: no `Example` template — examples are rendered inline by
+    // src/components/Examples.vue via the `allExample` static-query, not as
+    // standalone pages, and there is no src/templates/Example.vue. Declaring a
+    // template here makes `gridmix build` fail requiring that component.
   },
 
   plugins: [
-    {
-      use: '@gridsome/plugin-google-analytics',
+    /** TODO: resurrect properly */
+    /*{
+      use: '@gridmix/plugin-google-analytics',
       options: {
         id: 'UA-127625720-1'
       }
-    },
+    },*/
     {
-      use: '@gridsome/plugin-critical',
+      use: '@gridmix/plugin-critical',
       options: {
         paths: ['/'],
         width: 1300,
@@ -53,7 +67,7 @@ module.exports = {
       }
     },
     {
-      use: '@gridsome/vue-remark',
+      use: '@gridmix/vue-remark',
       options: {
         index: ['README'],
         baseDir: './docs',
@@ -61,7 +75,7 @@ module.exports = {
         typeName: 'DocPage',
         template: './src/templates/DocPage.vue',
         plugins: [
-          '@gridsome/remark-prismjs'
+          '@gridmix/remark-prismjs'
         ],
         remark: {
           autolinkHeadings: {
@@ -74,19 +88,19 @@ module.exports = {
       }
     },
     {
-      use: '@gridsome/source-filesystem',
+      use: '@gridmix/source-filesystem',
       options: {
         path: 'examples/*.md',
         typeName: 'Example',
         remark: {
           plugins: [
-            '@gridsome/remark-prismjs'
+            '@gridmix/remark-prismjs'
           ]
         }
       }
     },
     {
-      use: '@gridsome/source-filesystem',
+      use: '@gridmix/source-filesystem',
       options: {
         typeName: 'BlogPost',
         path: './blog/*/index.md',
@@ -95,10 +109,25 @@ module.exports = {
         },
         remark: {
           plugins: [
-            '@gridsome/remark-prismjs'
+            '@gridmix/remark-prismjs'
           ]
         }
       }
     }
-  ]
+  ],
+
+  css: {
+    loaderOptions: {
+      scss: {
+        implementation: require('sass')
+      },
+      sass: {
+        implementation: require('sass'),
+        sassOptions: {
+          indentedSyntax: true
+        }
+      }
+    }
+  }
+
 }

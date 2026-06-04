@@ -48,7 +48,7 @@
             <span
               class="hide-for-small"
               style="margin-left:5px;"
-            >v{{ $static.metadata.gridsomeVersion }}</span>
+            >v{{ $static.metadata.gridmixVersion }}</span>
           </a>
           <div class="dropdown">
             <a href="//github.com/gridsome/gridsome" rel="noopener noreferrer" target="_blank">
@@ -76,7 +76,7 @@
 <static-query>
 query {
   metadata {
-    gridsomeVersion
+    gridmixVersion
   }
 }
 </static-query>

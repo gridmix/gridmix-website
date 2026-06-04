@@ -19,7 +19,7 @@
         <p class="intro__info">
           <span>Open-source MIT Licensed. </span>
           <a href="//github.com/gridsome/gridsome" target="_blank" rel="noopener noreferrer">
-            <span>GitHub (v{{ $static.metadata.gridsomeVersion }})</span>
+            <span>GitHub (v{{ $static.metadata.gridmixVersion }})</span>
           </a>
         </p>
     </div>
@@ -29,7 +29,7 @@
 <static-query>
 query {
   metadata {
-    gridsomeVersion
+    gridmixVersion
   }
 }
 </static-query>

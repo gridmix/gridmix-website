@@ -14,16 +14,16 @@ Prism.languages.html.graphql = {
 
 module.exports = function (api) {
   api.loadSource(async ({ addMetadata, addCollection }) => {
-    let gridsomeVersion = ''
+    let gridmixVersion = ''
 
     try {
-      const { stdout } = await execa('npm', ['show', 'gridsome', 'version'])
-      gridsomeVersion = stdout
+      const { stdout } = await execa('npm', ['show', 'gridmix', 'version'])
+      gridmixVersion = stdout
     } catch (err) {
-      console.warn('Failed to get gridsome version from npm.')
+      console.warn('Failed to get gridmix version from npm.')
     }
 
-    addMetadata('gridsomeVersion', gridsomeVersion)
+    addMetadata('gridmixVersion', gridmixVersion)
 
     // contributors
     const authorsPath = path.join(__dirname, 'contributors/contributors.yaml')

@@ -33,6 +33,7 @@ img,
 svg {
   vertical-align: middle;
   max-width: 100%;
+  height: auto; // keep aspect ratio when max-width shrinks images that carry explicit width/height attrs (g-image, inlined SVGs)
 }
 
 hr {
