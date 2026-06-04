@@ -22,6 +22,7 @@ MD033:
     - Newsletter
     - details
     - summary
+    - b
 
 # no-bare-urls
 # The linter flags http://example.com and wants them formatted like
