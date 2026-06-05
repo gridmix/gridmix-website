@@ -64,7 +64,7 @@ export default function (Vue, { head, router, isServer }) {
 }
 ```
 
-You can now use `<Layout>` anywhere in your Gridsome project without importing it to every page:
+You can now use `<Layout>` anywhere in your Gridmix project without importing it to every page:
 
 ```html
 <!-- Page -->

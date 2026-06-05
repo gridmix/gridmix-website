@@ -53,7 +53,7 @@ query ($page: Int) {
 
 ## Pager component
 
-Gridsome has a built-in `Pager` component for easy pagination. Import it from `gridsome` in our components to use it. The component needs at least the `pageInfo.totalPages` and `pageInfo.currentPage` fields to render correctly.
+Gridmix has a built-in `Pager` component for easy pagination. Import it from `gridmix` in our components to use it. The component needs at least the `pageInfo.totalPages` and `pageInfo.currentPage` fields to render correctly.
 
 #### Example usage
 
@@ -70,7 +70,7 @@ Gridsome has a built-in `Pager` component for easy pagination. Import it from `g
 </template>
 
 <script>
-import { Pager } from 'gridsome'
+import { Pager } from 'gridmix'
 
 export default {
   components: {

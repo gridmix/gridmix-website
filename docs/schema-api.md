@@ -2,7 +2,7 @@
 
 > This API lets you define your own schema types to have persisted fields.
 
-Gridsome generates the GraphQL schema for metadata and collections based on the data which is discovered on startup. That's great for simple projects but will often lead to errors with for example missing fields because content has been removed in an external source. This API lets you define your own schema types to have persisted fields.
+Gridmix generates the GraphQL schema for metadata and collections based on the data which is discovered on startup. That's great for simple projects but will often lead to errors with for example missing fields because content has been removed in an external source. This API lets you define your own schema types to have persisted fields.
 
 The Schema API can be used in the `loadSource` and `createSchema` hooks.
 
@@ -12,7 +12,7 @@ The Schema API can be used in the `loadSource` and `createSchema` hooks.
 
 - types `string | array` *Required.*
 
-Schema types can be added as an [SDL](https://graphql.org/learn/schema/) string or by using the [factory methods](/docs/schema-api/#factory-methods). Types for collections **must** implement the `Node` interface. And Gridsome will not infer field types for custom fields unless the [`@infer`](/docs/schema-api/#infer) directive is used.
+Schema types can be added as an [SDL](https://graphql.org/learn/schema/) string or by using the [factory methods](/docs/schema-api/#factory-methods). Types for collections **must** implement the `Node` interface. And Gridmix will not infer field types for custom fields unless the [`@infer`](/docs/schema-api/#infer) directive is used.
 
 ```js
 api.loadSource(({ addSchemaTypes }) => {
@@ -64,7 +64,7 @@ addSchemaResolvers({
 - `context` An object with references to the internal store etc.
 - `info` Information about the execution state of the query.
 
-Note that any fields you add via custom resolvers [will not work in the `filter` portion of GraphQL queries](https://github.com/gridsome/gridsome/issues/1196). This is a gap in Gridsome's GraphQL implementation and will be fixed before Gridsome's 1.0 release.
+Note that any fields you add via custom resolvers [will not work in the `filter` portion of GraphQL queries](https://github.com/gridsome/gridsome/issues/1196). This is a gap in Gridmix's GraphQL implementation and will be fixed before Gridmix's 1.0 release.
 
 [Read more about GraphQL resolvers](https://graphql.org/learn/execution/#root-fields-resolvers)
 
@@ -129,7 +129,7 @@ query {
 Add a custom GraphQL schema that will be merged with the internal schema.
 
 ```js
-const { GraphQLSchema } = require('gridsome/graphql')
+const { GraphQLSchema } = require('gridmix/graphql')
 
 api.loadSource(({ addSchema }) => {
   addSchema(new GraphQLSchema({

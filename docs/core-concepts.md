@@ -18,7 +18,7 @@ Collections are stored in a temporary [local GraphQL data layer](/docs/data-laye
 
 ## Templates
 
-[Templates](/docs/templates/) are responsible for displaying nodes (single pages) of collections. Templates are usually located in `src/templates`. Gridsome tries to locate a file with the same name as the Collection if no component has been specified in templates config.
+[Templates](/docs/templates/) are responsible for displaying nodes (single pages) of collections. Templates are usually located in `src/templates`. Gridmix tries to locate a file with the same name as the Collection if no component has been specified in templates config.
 
 Here is an example:
 
@@ -65,18 +65,18 @@ export default {
 </script>
 ```
 
-🙌 Layouts can also be made [available globally](/docs/layouts#make-a-layout-global), so you don't need to import them per page. Note that the default template created by the Gridsome CLI will use a global layout component.
+🙌 Layouts can also be made [available globally](/docs/layouts#make-a-layout-global), so you don't need to import them per page. Note that the default template created by the Gridmix CLI will use a global layout component.
 
 [Learn more about Layouts](/docs/layouts/)
 
 ## Images
 
-Gridsome has a built-in `<g-image>` component that outputs an optimized progressive image. It also resizes and crops in real-time when developing if **width** and **height** is changed. `<g-image>` creates a super small **blurred inline base64 image** and then uses IntersectionObserver to lazy load image when in view.
+Gridmix has a built-in `<g-image>` component that outputs an optimized progressive image. It also resizes and crops in real-time when developing if **width** and **height** is changed. `<g-image>` creates a super small **blurred inline base64 image** and then uses IntersectionObserver to lazy load image when in view.
 
 [Learn more about g-image](/docs/images/)
 
 ## Linking
 
-Gridsome has a built-in `<g-link>` component that uses IntersectionObserver to prefetch linked pages when the link is in view. This makes browsing around in a Gridsome site very fast because the clicked page is already downloaded.
+Gridmix has a built-in `<g-link>` component that uses IntersectionObserver to prefetch linked pages when the link is in view. This makes browsing around in a Gridmix site very fast because the clicked page is already downloaded.
 
 [Learn more about g-link](/docs/linking/)

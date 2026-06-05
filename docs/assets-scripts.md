@@ -1,6 +1,6 @@
 # Add External Scripts
 
-It is really easy to use any external or third-party JavaScript with Gridsome. Since Gridsome is built on Vue, any method of importing external scripts in Vue works out-of-the-box with Gridsome.
+It is really easy to use any external or third-party JavaScript with Gridmix. Since Gridmix is built on Vue, any method of importing external scripts in Vue works out-of-the-box with Gridmix.
 
 ## Add to Components
 
@@ -69,7 +69,7 @@ If you want scripts to be globally available you can add them to `src/main.js`.
 
 ### Using an external Vue Plugin
 
-To use any external Vue plugin with Gridsome, just import the required plugin and pass the it to Vue using `Vue.use` inside your main.js file:
+To use any external Vue plugin with Gridmix, just import the required plugin and pass the it to Vue using `Vue.use` inside your main.js file:
 
 ```javascript
 //main.js
@@ -87,11 +87,11 @@ export default function (Vue) {
 }
 ```
 
-In this example we are importing the `VueTypedJs` plugin inside our Gridsome project.
+In this example we are importing the `VueTypedJs` plugin inside our Gridmix project.
 
 ### Using an external library
 
-To use any external library on our Gridsome project, you may proxy it to a property of the Vue prototype object. Since all components inherit their methods from the Vue prototype object this will make your external library or libraries automatically available across any and all components with no global variables or anything to manually import.
+To use any external library on our Gridmix project, you may proxy it to a property of the Vue prototype object. Since all components inherit their methods from the Vue prototype object this will make your external library or libraries automatically available across any and all components with no global variables or anything to manually import.
 
 Example:
 ```javascript
@@ -152,7 +152,7 @@ export default function (Vue) {
 
 ## Without SSR support
 
-`gridsome build` uses server-side rendering (SSR) to create a fully rendered page. If your Vue component does not support SSR or an external library (such as `jQuery`) changes the `DOM` element it won't be rendered properly. For these type of components, we suggest you to encapsulate the component inside `<ClientOnly></ClientOnly>` tags and import the library inside Vue's `mounted()` handler.
+`gridmix build` uses server-side rendering (SSR) to create a fully rendered page. If your Vue component does not support SSR or an external library (such as `jQuery`) changes the `DOM` element it won't be rendered properly. For these type of components, we suggest you to encapsulate the component inside `<ClientOnly></ClientOnly>` tags and import the library inside Vue's `mounted()` handler.
 
 For example, to use `vue-carousel` (that does not yet support SSR) you can do the following:
 
@@ -165,7 +165,7 @@ For example, to use `vue-carousel` (that does not yet support SSR) you can do th
           Hello World
         </slide>
         <slide>
-          Gridsome is awesome
+          Gridmix is awesome
         </slide>
       </carousel>
     </ClientOnly>

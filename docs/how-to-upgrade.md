@@ -1,9 +1,9 @@
 # How to upgrade
 
-Follow **one** of these steps to upgrade Gridsome to latest version.
+Follow **one** of these steps to upgrade Gridmix to latest version.
 
-- With **yarn** run `yarn upgrade gridsome --latest`
-- With **npm** run `npm install gridsome@latest`
+- With **yarn** run `yarn upgrade gridmix --latest`
+- With **npm** run `npm install gridmix@latest`
 
 ### Problems after upgrading
 

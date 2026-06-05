@@ -1,6 +1,6 @@
 # Prerequisites
 
-To get started with Gridsome, you’ll need to make sure you have the following software tools installed:
+To get started with Gridmix, you’ll need to make sure you have the following software tools installed:
 
 ### Node.js
 

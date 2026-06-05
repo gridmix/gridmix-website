@@ -1,8 +1,8 @@
 # Server API
 
-Create a `gridsome.server.js` at root in your project or plugin in order to use the Server API. The file must export a function that will receive an API which allows it to hook into various parts of Gridsome. The second argument is options from the plugin entry in `gridsome.config.js`.
+Create a `gridmix.server.js` at root in your project or plugin in order to use the Server API. The file must export a function that will receive an API which allows it to hook into various parts of Gridmix. The second argument is options from the plugin entry in `gridmix.config.js`.
 
-> `index.js` will be loaded instead if no `gridsome.server.js` file is found.
+> `index.js` will be loaded instead if no `gridmix.server.js` file is found.
 
 ```js
 function MyPlugin (api, options) {
@@ -50,7 +50,7 @@ module.exports = function (api) {
 
 ## api.createSchema(fn)
 
-Create a custom GraphQL schema which will be merged with the Gridsome schema.
+Create a custom GraphQL schema which will be merged with the Gridmix schema.
 
 ```js
 api.createSchema(({ addSchema, graphql }) => {
@@ -144,7 +144,7 @@ api.chainWebpack(config => {
 
 ## api.configureServer(fn)
 
-Gridsome runs an [Express](http://expressjs.com) server during development. Use this hook to add custom endpoints or configure the server.
+Gridmix runs an [Express](http://expressjs.com) server during development. Use this hook to add custom endpoints or configure the server.
 
 ```js
 api.configureServer(app => {

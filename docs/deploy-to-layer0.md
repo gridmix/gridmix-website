@@ -4,7 +4,7 @@
 
 ## From the terminal
 
-Layer0 allows you to deploy Gridsome applications directly from the terminal.
+Layer0 allows you to deploy Gridmix applications directly from the terminal.
 
 Install the Layer0 CLI.
 
@@ -45,10 +45,10 @@ export default new Router().static('dist', ({ cache }) => {
 })
 ```
 
-Build your Gridsome app:
+Build your Gridmix app:
 
 ```bash
-gridsome build
+gridmix build
 ```
 
 In your project's folder run the deploy command.
@@ -59,4 +59,4 @@ layer0 deploy
 
 **Note:**
 
-You do not need to setup any redirect rules for a Gridsome site to work with Layer0. Gridsome generates HTML files for every path on your site so rewrite rules aren't necessary (except for dynamic pages).
+You do not need to setup any redirect rules for a Gridmix site to work with Layer0. Gridmix generates HTML files for every path on your site so rewrite rules aren't necessary (except for dynamic pages).

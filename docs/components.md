@@ -1,6 +1,6 @@
 # Components
 
-Gridsome uses [Vue Single File Components] (https://vuejs.org/v2/guide/single-file-components.html). This means you add HTML, JavaScript and CSS in the same file. This makes your projects easier to maintain and test and your components more reusable. This is also used for **code-splitting** in the build process.
+Gridmix uses [Vue Single File Components] (https://vuejs.org/v2/guide/single-file-components.html). This means you add HTML, JavaScript and CSS in the same file. This makes your projects easier to maintain and test and your components more reusable. This is also used for **code-splitting** in the build process.
 
 Here’s an example of a file we’ll call `Card.vue` inside `src/components/`:
 
@@ -43,7 +43,7 @@ export default {
 
 ## Import to other Pages or Components
 
-When you have created a component you can easily import it into your pages. In Gridsome projects it's recommended to put all your .vue components in the **src/components** folder and import them into **Pages** or **Layouts** like this:
+When you have created a component you can easily import it into your pages. In Gridmix projects it's recommended to put all your .vue components in the **src/components** folder and import them into **Pages** or **Layouts** like this:
 
 ```html
 <template>

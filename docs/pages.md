@@ -2,7 +2,7 @@
 
 > Pages are responsible for presenting your data at a URL. Each page will be generated statically and have its own `index.html` file with the markup.
 
-You have two options for creating pages in Gridsome:
+You have two options for creating pages in Gridmix:
 
 1. **[Using the file system](#file-based-pages)** - For creating pages with [Single File Components](https://vuejs.org/v2/guide/single-file-components.html)
 2. **[Using the Pages API](#programmatic-pages)** - For creating pages programmatically.
@@ -30,7 +30,7 @@ Pages in `src/pages` are typically used for fixed URLs like `/about/` or for lis
 
 ## Programmatic pages
 
-Pages can be created programmatically by using the `createPages` hook in `gridsome.server.js`. This is useful if you want to manually create pages from an external API [without using GraphQL data layer](/docs/pages-api#create-pages-from-external-apis).
+Pages can be created programmatically by using the `createPages` hook in `gridmix.server.js`. This is useful if you want to manually create pages from an external API [without using GraphQL data layer](/docs/pages-api#create-pages-from-external-apis).
 
 ```js
 module.exports = function (api) {
@@ -53,7 +53,7 @@ Learn more about [dynamic routing](/docs/dynamic-routing/)
 
 ## Page meta info
 
-Gridsome uses [vue-meta](https://vue-meta.nuxtjs.org/) for handling meta info about the page.
+Gridmix uses [vue-meta](https://vue-meta.nuxtjs.org/) for handling meta info about the page.
 
 ```html
 <template>

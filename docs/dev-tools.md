@@ -1,19 +1,19 @@
 # Dev tools
 
-Tools for easier Gridsome development
+Tools for easier Gridmix development
 
 ## ESLint plugin
 
-An official ESLint plugin is available: https://www.npmjs.com/package/eslint-plugin-gridsome
+An official ESLint plugin is available: https://www.npmjs.com/package/eslint-plugin-gridmix
 
 To configure this, first install the necessary plugins:
 
 ```sh
 # NPM
-npm i -D eslint eslint-plugin-gridsome vue-eslint-parser
+npm i -D eslint eslint-plugin-gridmix vue-eslint-parser
 
 # Yarn
-yarn add -D eslint eslint-plugin-gridsome vue-eslint-parser
+yarn add -D eslint eslint-plugin-gridmix vue-eslint-parser
 ```
 
 Then add this code to `.eslintrc.js`:
@@ -24,9 +24,9 @@ module.exports = {
     node: true,
     es6: true
   },
-  plugins: ["gridsome"],
+  plugins: ["gridmix"],
   rules: {
-    "gridsome/format-query-block": "error"
+    "gridmix/format-query-block": "error"
   },
   parser: "vue-eslint-parser"
 }
@@ -35,7 +35,7 @@ module.exports = {
 ## Vetur
 
 [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) is Vue tooling for VS Code.  
-Vetur works perfect with Gridsome.
+Vetur works perfect with Gridmix.
 
 ### GraphQL syntax for `<page-query>` and `<static-query>`
 
@@ -58,9 +58,9 @@ Detail is [here](https://github.com/vuejs/vetur/issues/975#issuecomment-46119703
 
 ### Autocompletion
 
-Vetur has [gridsome-helper-json](https://www.npmjs.com/package/gridsome-helper-json) since version 0.17.0
+Vetur has [gridmix-helper-json](https://www.npmjs.com/package/gridmix-helper-json) since version 0.17.0
 helper-json can autocomplete tag and attribute.
-gridsome-helper-json support `<g-image>`, `<g-link>` and `<Pager>`.
+gridmix-helper-json support `<g-image>`, `<g-link>` and `<Pager>`.
 
 ![autocompletion-tag](./images/autocompletion-tag.png)
 

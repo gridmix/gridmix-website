@@ -2,7 +2,7 @@
 
 The `App.vue` file is the main component that wraps all your pages and templates. You can override the default file by having your own `App.vue` file in your `src` directory. Overriding it is useful if you want to have a layout that is shared across all your pages. Or if you want to have a `<transition>` component around the `<router-view>`.
 
-*Note: you must restart `gridsome develop` after adding a custom `App.vue` file.*
+*Note: you must restart `gridmix develop` after adding a custom `App.vue` file.*
 
 ## Add global metadata
 

@@ -5,7 +5,7 @@ The easiest way to host a static site on the blazing-fast S3 is to use the wonde
 **Follow the instructions here to get started:**
 https://apex.sh/docs/up/setup/
 
-When have followed the instructions and have a **up.json** file in your Gridsome project add this to the same file:
+When have followed the instructions and have a **up.json** file in your Gridmix project add this to the same file:
 
 ```js
 {

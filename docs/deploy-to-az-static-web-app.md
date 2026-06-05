@@ -38,8 +38,8 @@ After you sign in with GitHub, enter the repository information.
 1. Select your *Organization*
 2. Select your repository from the *Repository* drop-down
 3. Select your production branch from the *Branch* drop-down
-4. In the *Build Details* section, add configuration details to build your Gridsome website
-   - In our case, we can use **Vue.js**, as Gridsome uses the same structure to build
+4. In the *Build Details* section, add configuration details to build your Gridmix website
+   - In our case, we can use **Vue.js**, as Gridmix uses the same structure to build
      - Keep the default value in the *App location* box
      - Clear the default value from the *Api location* box
      - Keep the default value in the *App artifact location* box

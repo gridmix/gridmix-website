@@ -118,7 +118,7 @@ This example will query only nodes with `price` value between **49** and **99**.
 
 ```graphql
 query {
-  allPost(filter: { keywords: { contains: ["gridsome"] }}) {
+  allPost(filter: { keywords: { contains: ["gridmix"] }}) {
     edges {
       node {
         title
@@ -129,4 +129,4 @@ query {
 }
 ```
 
-This example will query only nodes which has the **gridsome** `keyword`.
+This example will query only nodes which has the **gridmix** `keyword`.

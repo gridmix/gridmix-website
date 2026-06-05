@@ -1,4 +1,4 @@
-# Add a search to Gridsome
+# Add a search to Gridmix
 
 ## Using local GraphQL data
 
@@ -80,13 +80,13 @@ Currently [Algolia](https://www.algolia.com) offers up to 10,000 search requests
 ### Setup
 
 1. Create a free Algolia account.
-2. Install [gridsome-plugin-algolia](https://gridsome.org/plugins/gridsome-plugin-algolia):
+2. Install [gridmix-plugin-algolia](https://gridmix.github.io/plugins/gridmix-plugin-algolia):
 ```sh
 # NPM
-npm install --save gridsome-plugin-algolia
+npm install --save gridmix-plugin-algolia
 
 # Yarn
-yarn add gridsome-plugin-algolia
+yarn add gridmix-plugin-algolia
 ```
 
 3. Follow the setup instructions on the plugin page for setting up the Algolia indexing process.

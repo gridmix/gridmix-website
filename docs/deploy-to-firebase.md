@@ -20,7 +20,7 @@ firebase login
 Build a site by running this command in your project's root directory:
 
 ```shell
-gridsome build
+gridmix build
 ```
 
 Create firebase.json and .firebaserc at the root of your project with the following content:

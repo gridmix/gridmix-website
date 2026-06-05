@@ -1,34 +1,34 @@
 # Starter kits
 
-Usage `gridsome create {name} {starter}`
+Usage `gridmix create {name} {starter}`
 
 - **name** - directory name to create the project in
 - **starter** - optional starter kit name or Git-repo url.
 
 ### Default
 
-The default project that is created with Gridsome CLI.
+The default project that is created with Gridmix CLI.
 
-`gridsome create my-website`
+`gridmix create my-website`
 
-[Learn more](https://github.com/gridsome/gridsome-starter-default)
+[Learn more](https://github.com/gridmix/gridmix-starter-default)
 
 ### WordPress
 
-`gridsome create my-website wordpress`
+`gridmix create my-website wordpress`
 
-[Learn more](https://github.com/gridsome/gridsome-starter-wordpress)
+[Learn more](https://github.com/gridmix/gridmix-starter-wordpress)
 
 ### Git-repositories
 
-#### gridsome-starter-markdown-blog
+#### gridmix-starter-markdown-blog
 
-`gridsome create my-website https://github.com/gridsome/gridsome-starter-markdown-blog.git`
+`gridmix create my-website https://github.com/gridmix/gridmix-starter-markdown-blog.git`
 
-[Learn more](https://github.com/gridsome/gridsome-starter-markdown-blog.git)
+[Learn more](https://github.com/gridmix/gridmix-starter-markdown-blog.git)
 
-#### gridsome-starter-blog
+#### gridmix-starter-blog
 
-`gridsome create my-website https://github.com/gridsome/gridsome-starter-blog.git`
+`gridmix create my-website https://github.com/gridmix/gridmix-starter-blog.git`
 
-[Learn more](https://github.com/gridsome/gridsome-starter-blog)
+[Learn more](https://github.com/gridmix/gridmix-starter-blog)

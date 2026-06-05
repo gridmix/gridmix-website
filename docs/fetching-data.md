@@ -1,18 +1,18 @@
 # Importing data
 
-Gridsome lets you import data from any data source into the [GraphQL data layer](/docs/data-layer/).
+Gridmix lets you import data from any data source into the [GraphQL data layer](/docs/data-layer/).
 
 ## Import with source plugins
 
-The easiest way to add data to Gridsome is to use **source plugins**. Gridsome data source plugins are added in `gridsome.config.js`. You can find available data source plugins in the [Plugins directory](/plugins).
+The easiest way to add data to Gridmix is to use **source plugins**. Gridmix data source plugins are added in `gridmix.config.js`. You can find available data source plugins in the [Plugins directory](/plugins).
 
-Here is an example of the [file-system](/plugins/@gridsome/source-filesystem) source added to config:
+Here is an example of the [file-system](/plugins/@gridmix/source-filesystem) source added to config:
 
 ```js
 module.exports = {
   plugins: [
     {
-      use: '@gridsome/source-filesystem',
+      use: '@gridmix/source-filesystem',
       options: {
         path: 'docs/**/*.md',
         typeName: 'DocPage'
@@ -28,9 +28,9 @@ Every data source has different options, so take a look at their documentation t
 
 ## Import from APIs
 
-Import data from any content APIs to the GraphQL data layer with the [Data store API](/docs/data-store-api/). To use the API you need a `gridsome.server.js` file in the root folder of your Gridsome project.
+Import data from any content APIs to the GraphQL data layer with the [Data store API](/docs/data-store-api/). To use the API you need a `gridmix.server.js` file in the root folder of your Gridmix project.
 
-Here is an example `gridsome.server.js` file that imports data:
+Here is an example `gridmix.server.js` file that imports data:
 
 ```js
 const axios = require('axios')
@@ -53,7 +53,7 @@ module.exports = function (api) {
 }
 ```
 
-> Data is fetched when starting a development server or start of a production build. You need to restart the server for the changes in **gridsome.server.js** to take effect.
+> Data is fetched when starting a development server or start of a production build. You need to restart the server for the changes in **gridmix.server.js** to take effect.
 
 ## Import from local files
 
@@ -61,30 +61,30 @@ module.exports = function (api) {
 
 ### Markdown
 
-In order to import data from Markdown files, you'll need both a Gridsome [**source plugin**](https://gridsome.org/plugins/) to read the data source, and a **transformer plugin** to convert the Markdown into HTML.
+In order to import data from Markdown files, you'll need both a Gridmix [**source plugin**](https://gridmix.github.io/plugins/) to read the data source, and a **transformer plugin** to convert the Markdown into HTML.
 
-Here's an example; install both the Gridsome Source Filesystem plugin, and the Remark transformer plugin:
+Here's an example; install both the Gridmix Source Filesystem plugin, and the Remark transformer plugin:
 
 **Yarn:**
 
 ```sh
-yarn add @gridsome/transformer-remark
-yarn add @gridsome/source-filesystem
+yarn add @gridmix/transformer-remark
+yarn add @gridmix/source-filesystem
 ```
 
 or **NPM:**
 
 ```sh
-npm install @gridsome/transformer-remark
-npm install @gridsome/source-filesystem
+npm install @gridmix/transformer-remark
+npm install @gridmix/source-filesystem
 ```
 
-Once they've been added to the project, add the plugin and transformer to your `gridsome.config.js`:
+Once they've been added to the project, add the plugin and transformer to your `gridmix.config.js`:
 
 ```js
 plugins: [
   {
-    use: '@gridsome/source-filesystem',
+    use: '@gridmix/source-filesystem',
     options: {
       path: 'posts/**/*.md',
       typeName: 'markdownPost',
@@ -101,7 +101,7 @@ transformers: {
 }
 ```
 
-Be sure that the `path` property is where the markdown files are located in your project. You'll probably want to add a [template](https://gridsome.org/docs/templates/) to display your markdown files as well.
+Be sure that the `path` property is where the markdown files are located in your project. You'll probably want to add a [template](https://gridmix.github.io/docs/templates/) to display your markdown files as well.
 
 Also, note that `typeName` will be the unique name of the GraphQL collection, used to query this content. Finally, bear in mind that you'll need to restart the server and refresh the GraphQL playground after making changes.
 
@@ -111,7 +111,7 @@ Also, note that `typeName` will be the unique name of the GraphQL collection, us
 
 ### YAML
 
-Import data from any yaml file to the GraphQL data layer with the [Data store API](/docs/data-store-api/). To use the API you need a `gridsome.server.js` file in the root folder of your Gridsome project.
+Import data from any yaml file to the GraphQL data layer with the [Data store API](/docs/data-store-api/). To use the API you need a `gridmix.server.js` file in the root folder of your Gridmix project.
 
 First, install the node package `js-yaml` into your project:
 
@@ -129,7 +129,7 @@ Here's a sample YAML file you can import:
   price: 3.99
 ```
 
-And this is an example `gridsome.server.js` file that imports the data from the yaml file above:
+And this is an example `gridmix.server.js` file that imports the data from the yaml file above:
 
 ```js
 const fs = require('fs');
@@ -163,10 +163,10 @@ npm install csv-parse
 # yarn add csv-parse
 ```
 
-Now in the `gridsome.server.js` file in the root of our project we can use `csv-parse`, along with the NodeJS `readFileSync` function, to import and process our data. The data for this example (`posts.csv`) would be a CSV file with a header row.
+Now in the `gridmix.server.js` file in the root of our project we can use `csv-parse`, along with the NodeJS `readFileSync` function, to import and process our data. The data for this example (`posts.csv`) would be a CSV file with a header row.
 
 ```js
-//gridsome.server.js
+//gridmix.server.js
 
 const {readFileSync} = require('fs');
 const parse = require('csv-parse/lib/sync');
@@ -193,9 +193,9 @@ module.exports = function (api) {
 
 ### JSON
 
-Import data from any json file to the GraphQL data layer with the [Data store API](/docs/data-store-api/). To use the API you need a `gridsome.server.js` file in the root folder of your Gridsome project.
+Import data from any json file to the GraphQL data layer with the [Data store API](/docs/data-store-api/). To use the API you need a `gridmix.server.js` file in the root folder of your Gridmix project.
 
-Here is an example `gridsome.server.js` file that imports json:
+Here is an example `gridmix.server.js` file that imports json:
 
 ```js
 module.exports = function (api) {

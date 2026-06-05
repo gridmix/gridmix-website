@@ -3,7 +3,7 @@ title: Populating <head>
 ---
 # Populating `<head>`
 
-Gridsome uses [vue-meta](https://github.com/nuxt/vue-meta) to populate **Head**.
+Gridmix uses [vue-meta](https://github.com/nuxt/vue-meta) to populate **Head**.
 
 ## Add global head metadata
 
@@ -88,7 +88,7 @@ export default {
 ## How to overwrite from child component
 
 If you need to overwrite meta tags, add `key` property.  
-Gridsome is passing `tagIdKeyName: 'key'` to vue-meta as default option.  
+Gridmix is passing `tagIdKeyName: 'key'` to vue-meta as default option.  
 
 ```js
 // parent component

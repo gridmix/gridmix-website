@@ -10,14 +10,14 @@ Collections can be added by [source plugins](/plugins/) or you can do it yoursel
 
 ## Add collections with Source plugins
 
-The easiest way to add collections to Gridsome is with **source plugins**. This example creates collections from a **WordPress site**. The `typeName` option for source plugins are usually for prefixing collection names that the plugin adds.
+The easiest way to add collections to Gridmix is with **source plugins**. This example creates collections from a **WordPress site**. The `typeName` option for source plugins are usually for prefixing collection names that the plugin adds.
 
 ```js
-// gridsome.config.js
+// gridmix.config.js
 module.exports = {
   plugins: [
     {
-      use: '@gridsome/source-wordpress',
+      use: '@gridmix/source-wordpress',
       options: {
         baseUrl: 'YOUR_WEBSITE_URL',
         typeName: 'WordPress',
@@ -34,7 +34,7 @@ You can browse **source plugins** on the [plugin page](/plugins).
 You can manually add collections from any external APIs. This example creates a collection named `Post` that fetches content from an API and adds the results as nodes to the collection.
 
 ```js
-// gridsome.server.js
+// gridmix.server.js
 const axios = require('axios')
 
 module.exports = function (api) {

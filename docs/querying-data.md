@@ -7,7 +7,7 @@ You can query data from the GraphQL data layer into any **Page, Template or Comp
 
 ## How to query with GraphQL
 
-Working with GraphQL in Gridsome is easy and you don't need to know much about GraphQL. Here is an example of how to use GraphQL in `page-query` for a page:
+Working with GraphQL in Gridmix is easy and you don't need to know much about GraphQL. Here is an example of how to use GraphQL in `page-query` for a page:
 
 ```html
 <template>

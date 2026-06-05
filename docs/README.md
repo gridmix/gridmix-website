@@ -1,8 +1,8 @@
 # Introduction
 
-> Gridsome is a Vue.js powered [Jamstack](/docs/jamstack) framework for building static generated websites & apps that are [fast by default](/docs/fast-by-default/) 🚀.
+> Gridmix is a Vue.js powered [Jamstack](/docs/jamstack) framework for building static generated websites & apps that are [fast by default](/docs/fast-by-default/) 🚀.
 
-## Why Gridsome?
+## Why Gridmix?
 
 - **Vue.js for frontend** - The simplest & most approachable frontend framework.
 - **Data sourcing** - Use any Headless CMSs, APIs or Markdown-files for data.
@@ -16,46 +16,46 @@
 
 ## What is the Jamstack?
 
-**Gridsome is a Jamstack framework**. Jamstack lets you build fast and secure sites and apps delivered by pre-rendering files and serving them directly from a CDN, removing the requirement to manage or run web servers.
+**Gridmix is a Jamstack framework**. Jamstack lets you build fast and secure sites and apps delivered by pre-rendering files and serving them directly from a CDN, removing the requirement to manage or run web servers.
 
 [Learn more about the Jamstack](/docs/jamstack).
 
 ## How it works
 
-Gridsome **generates static html** that hydrates into a **Vue SPA** once loaded in the browser. This means you can build both **static websites** & **dynamic apps** with Gridsome.
+Gridmix **generates static html** that hydrates into a **Vue SPA** once loaded in the browser. This means you can build both **static websites** & **dynamic apps** with Gridmix.
 
-Gridsome builds one `.html` file and one `.json` file for every page. After first page load it only uses the `.json` files to prefetch and load data for the next pages. It also builds a `.js` bundle for each page that needs it (code splitting).
+Gridmix builds one `.html` file and one `.json` file for every page. After first page load it only uses the `.json` files to prefetch and load data for the next pages. It also builds a `.js` bundle for each page that needs it (code splitting).
 
 It uses [vue-router](https://router.vuejs.org/) for SPA routing, and [vue-meta](https://vue-meta.nuxtjs.org/) for managing `<head>`.
 
-Gridsome adds a `57kB min gzip` JS bundle size by default.(vue.js, vue-router, vue-meta and some for image lazy loading).
+Gridmix adds a `57kB min gzip` JS bundle size by default.(vue.js, vue-router, vue-meta and some for image lazy loading).
 
 [Learn more about how it works.](/docs/how-it-works)
 
 ## Prerequisites
 
-You should have basic knowledge about HTML, CSS, [Vue.js](https://vuejs.org) and how to use the [Terminal](https://www.linode.com/docs/tools-reference/tools/using-the-terminal/). Knowing how [GraphQL](https://www.graphql.com/) works is a plus, but not required. Gridsome is a great way to learn it.
+You should have basic knowledge about HTML, CSS, [Vue.js](https://vuejs.org) and how to use the [Terminal](https://www.linode.com/docs/tools-reference/tools/using-the-terminal/). Knowing how [GraphQL](https://www.graphql.com/) works is a plus, but not required. Gridmix is a great way to learn it.
 
-Gridsome requires [Node.js](https://nodejs.org/) (v8.3+) and recommends [Yarn](https://yarnpkg.com).
+Gridmix requires [Node.js](https://nodejs.org/) (v22.18+) and recommends [pnpm](https://pnpm.io).
 
 ## How to install
 
-### 1. Install Gridsome CLI tool
+### 1. Install Gridmix CLI tool
 
-- Using **YARN:** `yarn global add @gridsome/cli`
-- Using **NPM:** `npm install --global @gridsome/cli`
+- Using **YARN:** `yarn global add @gridmix/cli`
+- Using **NPM:** `npm install --global @gridmix/cli`
 
-### 2. Create a Gridsome project
+### 2. Create a Gridmix project
 
-1. `gridsome create my-gridsome-site` to create a new project </li>
-2. `cd my-gridsome-site` to move into project directory
-3. `gridsome develop` to start local dev server at `http://localhost:8080`
+1. `gridmix create my-gridmix-site` to create a new project </li>
+2. `cd my-gridmix-site` to move into project directory
+3. `gridmix develop` to start local dev server at `http://localhost:8080`
 4. Happy coding 🎉🙌
 
 ### 3. Next steps
 
 1. Create `.vue` components in the `src/pages` directory to create page routes.
-2. Use `gridsome build` to generate static files in a `/dist` folder
+2. Use `gridmix build` to generate static files in a `/dist` folder
 
 #### Learn more
 
@@ -74,4 +74,4 @@ import Newsletter from '@/components/Newsletter.vue'
 
 - **[Nuxt.](https://nuxtjs.org/)** A Universal Vue.js Framework for server-side rendered (SSR) apps and websites. It also has a static site generator feature, but the main focus is SSR.
 
-- **[Gatsby.js](https://www.gatsbyjs.org/)** Gridsome is highly inspired by Gatsby.js (React.js based), which collects data sources and generates a static site from it. Gridsome is an alternative for Gatsby.js.
+- **[Gatsby.js](https://www.gatsbyjs.org/)** Gridmix is highly inspired by Gatsby.js (React.js based), which collects data sources and generates a static site from it. Gridmix is an alternative for Gatsby.js.

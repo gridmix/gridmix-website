@@ -1,11 +1,11 @@
 # Project configuration
 
-Gridsome requires `gridsome.config.js` to work. Plugins and project settings are located here. A basic configuration file would look something like this:
+Gridmix requires `gridmix.config.js` to work. Plugins and project settings are located here. A basic configuration file would look something like this:
 
 ```js
 module.exports = {
-  siteName: 'Gridsome',
-  siteUrl: 'https://www.gridsome.org',
+  siteName: 'Gridmix',
+  siteUrl: 'https://gridmix.github.io',
   plugins: []
 }
 ```
@@ -34,7 +34,7 @@ The description is used as description on your frontpage.
 - Type `string`
 - Default `''`
 
-Gridsome assumes your project is served from the root of your domain.
+Gridmix assumes your project is served from the root of your domain.
 Change this option to `'/my-app'` if your project will be hosted in a
 subdirectory called `my-app`.
 
@@ -57,7 +57,7 @@ Activate plugins by adding them to the `plugins` array.
 module.exports = {
   plugins: [
     {
-      use: '@gridsome/source-filesystem',
+      use: '@gridmix/source-filesystem',
       options: {
         path: 'blog/**/*.md',
         route: '/blog/:year/:month/:day/:slug',
@@ -93,7 +93,7 @@ Add global metadata to the GraphQL schema.
 - Type `string | Object`
 - Default `'./src/favicon.png'`
 
-Gridsome will use any image located at `src/favicon.png` as favicon and
+Gridmix will use any image located at `src/favicon.png` as favicon and
 touchicon by default, but you can define another path or sizes etc. The icon
 should be a square and minimum 16 pixels. The favicon will be resized to 16, 32,
 96 pixels. And the touchicon will be resized to 76, 152, 120, 167, 180 pixels by
@@ -263,4 +263,4 @@ Supported loaders are:
 - Type `string`
 - Default `'dist'`
 
-The directory where the production build files will be generated in when running `gridsome build`.
+The directory where the production build files will be generated in when running `gridmix build`.

@@ -1,10 +1,10 @@
-# Add comments to Gridsome
+# Add comments to Gridmix
 
-Adding comments to a static site can be easy, you have the option to use either external services that load an iframe into your site or applications that connect to your GitHub repository which commits the changes made on your site. We have listed some great services that integrate well with Gridsome.
+Adding comments to a static site can be easy, you have the option to use either external services that load an iframe into your site or applications that connect to your GitHub repository which commits the changes made on your site. We have listed some great services that integrate well with Gridmix.
 
 ## Disqus
 
-Disqus is an external service that injects an iframe on your site, one easy way to use Disqus with Gridsome is to use the package [vue-disqus](https://github.com/ktquez/vue-disqus) that provides you with a custom component that you can use across your project.
+Disqus is an external service that injects an iframe on your site, one easy way to use Disqus with Gridmix is to use the package [vue-disqus](https://github.com/ktquez/vue-disqus) that provides you with a custom component that you can use across your project.
 
 #### Sign up on Disqus
 
@@ -35,7 +35,7 @@ export default function (Vue, { head }) {
 Now you are free to use the disqus component anywhere you want, simply use it like this:
 
 ```js
-<Disqus shortname="mygridsomesite" :identifier="$page.post.title" />
+<Disqus shortname="mygridmixsite" :identifier="$page.post.title" />
 ```
 
 You need to provide a shortname which you can find on [Disqus](https://disqus.com/) under your site you configured after you signed up. You also need to provide an identifier, in this example we used the blogpost title from the GraphQL query.
@@ -51,6 +51,6 @@ Read more: [Staticman](https://staticman.net/)
 
 [Vssue](https://vssue.js.org/guide/) is a Vue component / plugin, which can enable comments for your static pages. It stores comments in the issue system of code hosting platforms (e.g. Github, Gitlab, Bitbucket, Gitee, etc.)
 
-Go to [Vssue docs](https://vssue.js.org/guide/gridsome.html) for how to use it in Gridsome.
+Go to [Vssue docs](https://vssue.js.org/guide/gridsome.html) for how to use it in Gridmix.
 
 Read more: [Vssue](https://vssue.js.org/)

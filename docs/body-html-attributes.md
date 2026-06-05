@@ -1,6 +1,6 @@
 # Body & html attributes
 
-Gridsome can use [vue-meta](https://github.com/declandewet/vue-meta) to modify `<body>` and `<head>` attributes.
+Gridmix can use [vue-meta](https://github.com/declandewet/vue-meta) to modify `<body>` and `<head>` attributes.
 
 ## Change attributes globally
 

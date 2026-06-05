@@ -1,16 +1,16 @@
 # Deploy to Netlify
 
-Netlify is an excellent solution for deploying and hosting Gridsome sites. Netlify is a unified platform that automates your code to create high-performant, easily maintainable sites and web apps. They provide continuous deployment (Git-triggered builds), an intelligent, global CDN, full DNS (including custom domains), automated HTTPS, asset acceleration, and more.
+Netlify is an excellent solution for deploying and hosting Gridmix sites. Netlify is a unified platform that automates your code to create high-performant, easily maintainable sites and web apps. They provide continuous deployment (Git-triggered builds), an intelligent, global CDN, full DNS (including custom domains), automated HTTPS, asset acceleration, and more.
 
-Their free tier includes unlimited personal and commercial projects, HTTPS, continuous deployment from public or private repos and more. Here are a few ways to deploy your Gridsome applications to Netlify:
+Their free tier includes unlimited personal and commercial projects, HTTPS, continuous deployment from public or private repos and more. Here are a few ways to deploy your Gridmix applications to Netlify:
 
 ## From your Git repository
 
-To deploy your Gridsome site to Netlify, go to your [Netlify app](https://app.netlify.com/) and click `New site from Git`. Select your project repo from either GitHub, GitLab, or Bitbucket.
+To deploy your Gridmix site to Netlify, go to your [Netlify app](https://app.netlify.com/) and click `New site from Git`. Select your project repo from either GitHub, GitLab, or Bitbucket.
 
 Add these build settings:
 
-- **Build Command:** `gridsome build`
+- **Build Command:** `gridmix build`
 - **Publish directory:** `dist`
 
 And click `Deploy Site` to deploy your application.
@@ -20,15 +20,15 @@ Alternatively, you can specify your deploy settings from a `netlify.toml` file. 
 ```toml
 [build]
   publish = "dist"
-  command = "gridsome build"
+  command = "gridmix build"
 ```
 
-These commands will tell Netlify to prefill your build settings with the provided configuration when deploying your Gridsome application.
+These commands will tell Netlify to prefill your build settings with the provided configuration when deploying your Gridmix application.
 More infomation on `netlify.toml` files can be found in the [Netlify docs](https://www.netlify.com/docs/netlify-toml-reference/).
 
 ## From the terminal
 
-Netlify also allows you to deploy Gridsome applications directly from the terminal.
+Netlify also allows you to deploy Gridmix applications directly from the terminal.
 
 Install the Netlify CLI.
 
@@ -56,4 +56,4 @@ netlify deploy --prod
 
 **Note:**
 
-You do not need to setup any redirect rules for a Gridsome site to work with Netlify. Gridsome generates HTML files for every path on your site so rewrite rules aren't necessary (except for dynamic pages).
+You do not need to setup any redirect rules for a Gridmix site to work with Netlify. Gridmix generates HTML files for every path on your site so rewrite rules aren't necessary (except for dynamic pages).

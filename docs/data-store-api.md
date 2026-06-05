@@ -2,7 +2,7 @@
 
 The Data Store API lets you insert your own data into the GraphQL data layer. You will then be able to access it through GraphQL in your components. **Use this API if you want to build a custom data source connection or a plugin.**
 
-Start by using the `api.loadSource()` hook in `gridsome.server.js`:
+Start by using the `api.loadSource()` hook in `gridmix.server.js`:
 
 ```js
 module.exports = function (api) {
@@ -180,4 +180,4 @@ module.exports = function (api) {
 
 ### Preprocessing Markdown Frontmatter
 
-When using plugins such as `@gridsome/vue-remark`, the frontmatter is processed *before* being passed to `vue-remark`. Because of this, it is important to modify any frontmatter data through the Gridsome Server API (as shown above) before it is passed to the transformer.
+When using plugins such as `@gridmix/vue-remark`, the frontmatter is processed *before* being passed to `vue-remark`. Because of this, it is important to modify any frontmatter data through the Gridmix Server API (as shown above) before it is passed to the transformer.

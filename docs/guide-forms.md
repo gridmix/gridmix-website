@@ -1,6 +1,6 @@
-# Add a form to Gridsome
+# Add a form to Gridmix
 
-Adding forms to a static site is easy, but you need to use an external service. We have listed some great services that integrate well with Gridsome.
+Adding forms to a static site is easy, but you need to use an external service. We have listed some great services that integrate well with Gridmix.
 
 ## Formspree
 

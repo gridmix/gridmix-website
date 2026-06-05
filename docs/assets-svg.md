@@ -2,7 +2,7 @@
 
 ## As plain markup
 
-The simplest way to use SVG icons in Gridsome is to just add them as normal markup. This gives a lot of flexibility with the power of Vue.  Here is an example where we have added an icon from https://feathericons.com/ as markup.
+The simplest way to use SVG icons in Gridmix is to just add them as normal markup. This gives a lot of flexibility with the power of Vue.  Here is an example where we have added an icon from https://feathericons.com/ as markup.
 
 ```html
 <template>
@@ -34,7 +34,7 @@ npm i -D vue-svg-loader
 yarn add -D vue-svg-loader
 ```
 
-You will need to update the webpack config in `gridsome.config.js` to use the new loader:
+You will need to update the webpack config in `gridmix.config.js` to use the new loader:
 ```js
 module.exports = {
   chainWebpack: config => {
@@ -61,7 +61,7 @@ Then you can import your SVGs from within your Vue templates like any Vue compon
 
 ## FontAwesome SVG Icons
 
-FontAwesome is one of the most popular icon libraries out there, and with version 5, they've made it incredibly easy to use with Vue without bloating your codebase with a lot of icons/styles you're not using. We can start implementing it in our Gridsome site by installing a few needed items:
+FontAwesome is one of the most popular icon libraries out there, and with version 5, they've made it incredibly easy to use with Vue without bloating your codebase with a lot of icons/styles you're not using. We can start implementing it in our Gridmix site by installing a few needed items:
 
 ```shell
 # NPM
@@ -104,7 +104,7 @@ And best of all, the SVG for GitHub/Twitter icons will be the only ones added to
 
 ## Purge CSS
 
-If you are using Purge CSS you have to include Font Awesome classes in the whitelist for the icons to work properly in the production environment. A code example with Tailwind and Purge CSS for `gridsome.config.js`:
+If you are using Purge CSS you have to include Font Awesome classes in the whitelist for the icons to work properly in the production environment. A code example with Tailwind and Purge CSS for `gridmix.config.js`:
 
 ```js
 class TailwindExtractor {
@@ -166,7 +166,7 @@ npm i -D vue-svg-inline-loader
 yarn add -D vue-svg-inline-loader
 ```
 
-Then you need to modify `gridsome.config.js`:
+Then you need to modify `gridmix.config.js`:
 
 ```js
 module.exports = {

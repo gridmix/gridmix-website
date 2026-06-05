@@ -2,10 +2,10 @@
 
 The Pages API lets you create custom pages. This API is called after the GraphQL schema has been generated so you can query nodes and create pages from them or any other data.
 
-Start by using the `api.createPages()` hook in `gridsome.server.js`:
+Start by using the `api.createPages()` hook in `gridmix.server.js`:
 
 ```js
-//gridsome.server.js
+//gridmix.server.js
 module.exports = function (api) {
   api.createPages(({ createPage, graphql }) => {
     // Create pages here
@@ -92,7 +92,7 @@ Each page can have a context which will be available as variables for `page-quer
 ##### Example usage
 
 ```js
-//gridsome.server.js
+//gridmix.server.js
 module.exports = function (api) {
   api.createPages(({ createPage }) => {
     createPage({
@@ -127,7 +127,7 @@ query ($customValue: String) {
 ### Create pages from GraphQL
 
 ````js
-//gridsome.server.js
+//gridmix.server.js
 module.exports = function (api) {
   api.createPages(async ({ graphql, createPage }) => {
     const { data } = await graphql(`{
@@ -159,7 +159,7 @@ module.exports = function (api) {
 We use `createManagedPages` in this example because we don't need the pages to be re-created on changes. The template also uses the context for rendering data instead of GraphQL results.
 
 ```js
-//gridsome.server.js
+//gridmix.server.js
 module.exports = function (api) {
   api.createManagedPages(async ({ createPage }) => {
     const { data } = await axios.get('https://api.example.com/posts')

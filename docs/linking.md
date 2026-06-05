@@ -4,7 +4,7 @@ The `<g-link>` component is available globally in all your Pages, Templates & Co
 
 ## How it works
 
-`<g-link>` uses IntersectionObserver to prefetch linked pages when link is in view. **This makes browsing around in a Gridsome site very fast because the clicked page is already downloaded.**
+`<g-link>` uses IntersectionObserver to prefetch linked pages when link is in view. **This makes browsing around in a Gridmix site very fast because the clicked page is already downloaded.**
 
 ## How to use
 

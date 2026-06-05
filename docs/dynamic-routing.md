@@ -60,7 +60,7 @@ module.exports = function (api) {
 
 ## Generating rewrite rules
 
-Gridsome is not able to generate HTML files for every possible variation of a dynamic route which means the URLs most likely will show a 404 page when visited directly. Instead, Gridsome generates one HTML file which can be used in a rewrite rule. For example, a route like `/user/:id` will generate a HTML file located at `/user/_id.html`. You can have a rewrite rule to map all paths matching `/user/:id` to that file.
+Gridmix is not able to generate HTML files for every possible variation of a dynamic route which means the URLs most likely will show a 404 page when visited directly. Instead, Gridmix generates one HTML file which can be used in a rewrite rule. For example, a route like `/user/:id` will generate a HTML file located at `/user/_id.html`. You can have a rewrite rule to map all paths matching `/user/:id` to that file.
 
 Rewrite rules must be generated manually because every server type has its own syntax. The `redirects` array in the `afterBuild` hook contains all necessary rewrite rules that should be generated.
 

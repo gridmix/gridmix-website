@@ -7,7 +7,7 @@
 The example below shows you how to setup route and template for a [collection](/docs/collections/) named `Post`. A component located at `src/templates/{Collection}.vue` will be used as template if no component is specified.
 
 ```js
-// gridsome.config.js
+// gridmix.config.js
 module.exports = {
   templates: {
     Post: '/blog/:year/:month/:title',
@@ -18,7 +18,7 @@ module.exports = {
 Specify a **custom component** path:
 
 ```js
-// gridsome.config.js
+// gridmix.config.js
 module.exports = {
   templates: {
     Post: [
@@ -34,7 +34,7 @@ module.exports = {
 Setup **multiple templates** for a collection:
 
 ```js
-// gridsome.config.js
+// gridmix.config.js
 module.exports = {
   templates: {
     Product: [
@@ -80,7 +80,7 @@ Path parameters are slugified by default, but the original value can be used by 
 The `path` option can be a function, which receives the node as the first argument and returns a path.
 
 ```js
-// gridsome.config.js
+// gridmix.config.js
 module.exports = {
   templates: {
     Post: [

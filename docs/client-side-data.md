@@ -24,10 +24,10 @@ export default {
 }
 ```
 
-The `fetch` method can also be imported from `gridsome`.
+The `fetch` method can also be imported from `gridmix`.
 
 ```js
-import { fetch } from 'gridsome'
+import { fetch } from 'gridmix'
 
 export default {
   async mounted () {

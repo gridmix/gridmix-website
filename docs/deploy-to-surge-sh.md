@@ -1,6 +1,6 @@
 # Deploying to Surge.sh
 
-In this guide, you will learn how to deploy your Gridsome site to Surge.
+In this guide, you will learn how to deploy your Gridmix site to Surge.
 
 [Surge](https://surge.sh/) is a cloud platform for hosting static websites, which is extremely simple to use but offers customization options for those who need them.
 
@@ -27,7 +27,7 @@ yarn global add surge
 Build a site by running this command in your project's root directory:
 
 ```shell
-gridsome build
+gridmix build
 ```
 
 This generates a publishable version of your site in the `./dist` folder.
@@ -46,4 +46,4 @@ Done 🙂
 
 ---
 
-⚠️ Consult the [Surge Docs](https://surge.sh/help/) for information about how to customize your deployment further. Remember that each time you redeploy your site, you will need to rerun `gridsome build` first.
+⚠️ Consult the [Surge Docs](https://surge.sh/help/) for information about how to customize your deployment further. Remember that each time you redeploy your site, you will need to rerun `gridmix build` first.

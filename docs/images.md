@@ -1,6 +1,6 @@
 # Images
 
-Gridsome has a built-in `<g-image>` component that outputs an optimized **progressive image**. It also resizes and crops in real-time when developing.
+Gridmix has a built-in `<g-image>` component that outputs an optimized **progressive image**. It also resizes and crops in real-time when developing.
 
 A typical image component will look like this:
 
@@ -9,7 +9,7 @@ A typical image component will look like this:
 ```
 💡 `~` is an alias to **/src/** folder.
 
-📣 **Only local, relative image paths will be compressed by Gridsome.**
+📣 **Only local, relative image paths will be compressed by Gridmix.**
 
 ## How it works
 
@@ -49,7 +49,7 @@ query ($id: ID!) {
 
 ## Usage in Markdown
 
-The [@gridsome/transformer-remark](/plugins/@gridsome/transformer-remark) transformer plugin automatically converts normal Markdown images to `g-image` compatible markup.
+The [@gridmix/transformer-remark](/plugins/@gridmix/transformer-remark) transformer plugin automatically converts normal Markdown images to `g-image` compatible markup.
 
 ```md
 ![Alternative text](./image.jpg)

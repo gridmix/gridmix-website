@@ -6,7 +6,7 @@ Read more about [referencing other nodes](/docs/data-store-api/#referencing-othe
 
 ## Creating a taxonomy page
 
-In this example we are going to create two collections, a `Post` and a `Tag` types. We do that in the `loadSource` hook in our `gridsome.server.js` file. The `Post` nodes will have a `tags` field which will be an array of `Tag` ids.
+In this example we are going to create two collections, a `Post` and a `Tag` types. We do that in the `loadSource` hook in our `gridmix.server.js` file. The `Post` nodes will have a `tags` field which will be an array of `Tag` ids.
 
 ```js
 api.loadSource(actions => {

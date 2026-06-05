@@ -66,7 +66,7 @@ Read more about the [Pages API](/docs/pages-api/)
 
 ## Local JSON and YAML files
 
-Gridsome includes webpack loaders for importing [JSON](https://www.json.org/) and [YAML](https://yaml.org/) files into your components.
+Gridmix includes webpack loaders for importing [JSON](https://www.json.org/) and [YAML](https://yaml.org/) files into your components.
 
 ```html
 <template>

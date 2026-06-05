@@ -1,4 +1,4 @@
-# Use CSS in Gridsome
+# Use CSS in Gridmix
 
 Global stylesheets and assets are usually located in the `src/assets` folder and imported into `src/main.js`.
 
@@ -22,7 +22,7 @@ npm install -D sass-loader@^10.1.1 sass
 # Using Yarn
 yarn add -D sass-loader@^10.1.1 sass
 ```
-The tag of version 10 for `sass-loader` is needed, since version 11 requires Webpack 5 - which Gridsome does not yet support.
+The tag of version 10 for `sass-loader` is needed, since version 11 requires Webpack 5 - which Gridmix does not yet support.
 
 Now you can import **.scss** files in **src/main.js**:
 
@@ -57,7 +57,7 @@ npm i -D style-resources-loader
 yarn add -D style-resources-loader
 ```
 
-You'll need to add the following block to the top of your `gridsome.config.js` file before the existing `module.exports`:
+You'll need to add the following block to the top of your `gridmix.config.js` file before the existing `module.exports`:
 
 ```js
 const path = require('path')
@@ -140,7 +140,7 @@ This will change the `.card` class in current component automatically to somethi
 
 ## Enable Critical CSS
 
-Gridsome [Critical CSS plugin](/plugins/@gridsome/plugin-critical) extracts CSS from components in selected view port size and adds the CSS inline to `<head>`.
+Gridmix [Critical CSS plugin](/plugins/@gridmix/plugin-critical) extracts CSS from components in selected view port size and adds the CSS inline to `<head>`.
 
 ## Add a CSS framework
 
@@ -150,7 +150,7 @@ Gridsome [Critical CSS plugin](/plugins/@gridsome/plugin-critical) extracts CSS 
 
 ### Add TailwindCSS with a Plugin
 
-The quickest and easiest way to get up and running with Tailwind CSS in your project is to install it with the [Gridsome Tailwind Plugin](/plugins/gridsome-plugin-tailwindcss). A Gridsome plugin will typically have the majority of the boilerplate and configuration done for you, eliminating a lot of the set up time.
+The quickest and easiest way to get up and running with Tailwind CSS in your project is to install it with the [Gridmix Tailwind Plugin](/plugins/gridmix-plugin-tailwindcss). A Gridmix plugin will typically have the majority of the boilerplate and configuration done for you, eliminating a lot of the set up time.
 
 ### Add TailwindCSS Manually
 
@@ -215,7 +215,7 @@ module.exports = {
 
 Learn more about customizing your TailwindCSS installation in Tailwind's [configuration documentation](https://tailwindcss.com/docs/configuration/)
 
-Next, `gridsome.config.js` needs to be updated to add our TailwindCSS and PurgeCSS configuration:
+Next, `gridmix.config.js` needs to be updated to add our TailwindCSS and PurgeCSS configuration:
 
 ```javascript
 const tailwind = require('tailwindcss')
@@ -228,7 +228,7 @@ const postcssPlugins = [
 if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss(require('./purgecss.config.js')))
 
 module.exports = {
-    siteName: 'Gridsome',
+    siteName: 'Gridmix',
     plugins: [],
     css: {
         loaderOptions: {
@@ -271,7 +271,7 @@ module.exports = {
 }
 ```
 
-Be sure to restart the `gridsome develop` command to ensure the changes are compiled in the current build.
+Be sure to restart the `gridmix develop` command to ensure the changes are compiled in the current build.
 
 ## Bulma
 
@@ -436,7 +436,7 @@ npm install -D webpack-node-externals
 yarn add -D webpack-node-externals
 ```
 
-Then modify your `gridsome.server.js` file to include the webpack-node-externals package, and allowlist Vuetify.
+Then modify your `gridmix.server.js` file to include the webpack-node-externals package, and allowlist Vuetify.
 ```js
 const nodeExternals = require('webpack-node-externals')
 
@@ -452,7 +452,7 @@ module.exports = function (api) {
   })
 
   api.loadSource(store => {
-    // Use the Data store API here: https://gridsome.org/docs/data-store-api
+    // Use the Data store API here: https://gridmix.github.io/docs/data-store-api
   })
 }
 ```
@@ -471,7 +471,7 @@ yarn add -D deepmerge fibers sass sass-loader@7.3.1 vuetify-loader
 >❗️Note: `sass-loader` must be lower than 8 version,
   also remove `node-sass` package if it's installed, otherwise build will fail.
 
-2. Configure webpack in `gridsome.server.js`
+2. Configure webpack in `gridmix.server.js`
 ```js
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
 

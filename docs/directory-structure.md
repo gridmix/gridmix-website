@@ -1,12 +1,12 @@
 # Directory structure
 
-A basic Gridsome project would be structured like this:
+A basic Gridmix project would be structured like this:
 
 ```text
 .
 ├── package.json
-├── gridsome.config.js
-├── gridsome.server.js
+├── gridmix.config.js
+├── gridmix.server.js
 ├── static/
 └── src/
     ├── main.js
@@ -27,15 +27,15 @@ A basic Gridsome project would be structured like this:
 
 Contains information about which plugins are installed in your project.
 
-### gridsome.config.js
+### gridmix.config.js
 
 This file contains configuration and options for installed plugins.
 
 [Read more about project config](/docs/config/)
 
-### gridsome.server.js
+### gridmix.server.js
 
-This file is optional and is used to hook into various parts of the Gridsome server. The file must export a function which will have access to the API.
+This file is optional and is used to hook into various parts of the Gridmix server. The file must export a function which will have access to the API.
 
 [Read more about the Server API](/docs/server-api/)
 
@@ -74,7 +74,7 @@ component file must match the node type in your GraphQL schema.
 
 ### Custom index.html
 
-Occasionally you will need to override the base HTML template that Gridsome uses to generate your pages from. Gridsome makes this really easy. All you have to do is create a new `index.html` file in your `src` directory.
+Occasionally you will need to override the base HTML template that Gridmix uses to generate your pages from. Gridmix makes this really easy. All you have to do is create a new `index.html` file in your `src` directory.
 
 [Read more about overriding index.html](/docs/overriding-index/)
 
@@ -90,7 +90,7 @@ Files in this directory will be copied directly to `dist` during build. For exam
 
 ## Aliases
 
-In Gridsome you can use the aliases `~` or `@` to link to files inside the `/src` folder. For example, you can import a Vue component by using `import Card from '~/components/Card'`
+In Gridmix you can use the aliases `~` or `@` to link to files inside the `/src` folder. For example, you can import a Vue component by using `import Card from '~/components/Card'`
 
 ## Recommendation
 

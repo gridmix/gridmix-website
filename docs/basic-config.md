@@ -1,15 +1,15 @@
 # Basic config
 
-Every Gridsome project has a `/gridsome.config.js` file. This is where plugin options and global projects settings are located.
+Every Gridmix project has a `/gridmix.config.js` file. This is where plugin options and global projects settings are located.
 
 [For complete config API go here](/docs/config/)
 
 ```js
 module.exports = {
-  siteName: 'Gridsome',
-  siteUrl: 'https://www.gridsome.org',
+  siteName: 'Gridmix',
+  siteUrl: 'https://gridmix.github.io',
   siteDescription: 'The meta description for homepage',
-  titleTemplate: '%s - Gridsome',
+  titleTemplate: '%s - Gridmix',
   icon: 'src/favicon.png',
 
   plugins: [

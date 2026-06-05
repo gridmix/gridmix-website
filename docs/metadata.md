@@ -1,6 +1,6 @@
 # Global metadata
 
-Gridsome lets you add global metadata with the [Data store API](/docs/data-store-api/). To use the API you need a `gridsome.server.js` file in the root folder of your Gridsome project.  Metadata are static and can't be updated or changed from client.
+Gridmix lets you add global metadata with the [Data store API](/docs/data-store-api/). To use the API you need a `gridmix.server.js` file in the root folder of your Gridmix project.  Metadata are static and can't be updated or changed from client.
 
 > Adding metadata is great if you have data you want to be globally accessible, but don't need to be in any GraphQL collection.
 

@@ -1,31 +1,31 @@
-# Gridsome Netlify CMS Guide
+# Gridmix Netlify CMS Guide
 
 ## Prerequisites
 
-We assume you've worked with `@gridsome/source-filesystem` and `@gridsome/transformer-remark` before this guide.
+We assume you've worked with `@gridmix/source-filesystem` and `@gridmix/transformer-remark` before this guide.
 
-Gridsome requires **Node.js** and recommends **Yarn**. [How to setup](https://gridsome.org/docs/prerequisites)
+Gridmix requires **Node.js** and recommends **pnpm**. [How to setup](https://gridmix.github.io/docs/prerequisites)
 
-## Create a Gridsome project
+## Create a Gridmix project
 
-1. `gridsome create my-gridsome-site` to create a new project
-2. `cd my-gridsome-site` to open folder
-3. `gridsome develop` to start local development server
+1. `gridmix create my-gridmix-site` to create a new project
+2. `cd my-gridmix-site` to open folder
+3. `gridmix develop` to start local development server
 
 ## Install the required dependencies
 
-Gridsome already provides you a set of [plugins](https://gridsome.org/plugins) to get you started.
+Gridmix already provides you a set of [plugins](https://gridmix.github.io/plugins) to get you started.
 
-- `yarn add netlify-cms gridsome-plugin-netlify-cms @gridsome/source-filesystem @gridsome/transformer-remark` to install the required dependencies
-- `npm add netlify-cms gridsome-plugin-netlify-cms @gridsome/source-filesystem @gridsome/transformer-remark`
+- `yarn add netlify-cms gridmix-plugin-netlify-cms @gridmix/source-filesystem @gridmix/transformer-remark` to install the required dependencies
+- `npm add netlify-cms gridmix-plugin-netlify-cms @gridmix/source-filesystem @gridmix/transformer-remark`
 
 ## Configuration
 
-Alright, the plugins are installed, it's now time to setup the right configuration. Open the `gridsome.config.js` file and make sure it looks like this:
+Alright, the plugins are installed, it's now time to setup the right configuration. Open the `gridmix.config.js` file and make sure it looks like this:
 
 ```js
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'Gridmix',
   transformers: {
     remark: {
       externalLinksTarget: '_blank',
@@ -39,7 +39,7 @@ module.exports = {
 
   plugins: [
     {
-      use: '@gridsome/source-filesystem',
+      use: '@gridmix/source-filesystem',
       options: {
         path: 'posts/**/*.md',
         typeName: 'Post',
@@ -51,7 +51,7 @@ module.exports = {
       }
     },
     {
-      use: `gridsome-plugin-netlify-cms`,
+      use: `gridmix-plugin-netlify-cms`,
       options: {
         publicPath: `/admin`,
         modulePath: `src/admin/index.js`
@@ -61,7 +61,7 @@ module.exports = {
 }
 ```
 
-Please read [gridsome-plugin-netlify-cms](https://gridsome.org/plugins/gridsome-plugin-netlify-cms), [transformer-remark](https://gridsome.org/plugins/@gridsome/transformer-remark) for more information about the configurations.
+Please read [gridmix-plugin-netlify-cms](https://gridmix.github.io/plugins/gridmix-plugin-netlify-cms), [transformer-remark](https://gridmix.github.io/plugins/@gridmix/transformer-remark) for more information about the configurations.
 
 ## Netlify CMS setup
 
@@ -164,4 +164,4 @@ Part 2, Netlify:
 
 ## Start coding
 
-Your basic blog scaffold is done, now you can query data from the GraphQL server just like you're working with the filesystem. For more info read [querying data](https://gridsome.org/docs/querying-data).
+Your basic blog scaffold is done, now you can query data from the GraphQL server just like you're working with the filesystem. For more info read [querying data](https://gridmix.github.io/docs/querying-data).
