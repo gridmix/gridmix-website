@@ -1,4 +1,4 @@
-# 3. Data sources in Gridsome
+# 3. Data sources in Gridmix
 
 ## The GraphQL data layer
 

@@ -16,6 +16,6 @@ Follow the instructions [here](https://git-scm.com/book/en/v2/Getting-Started-In
 
 For Windows, if you have Chocolatey installed, run `choco install git`
 
-## Install Gridsome Cli
+## Install Gridmix Cli
 
-Run `npm install --global @gridsome/cli`
+Run `npm install --global @gridmix/cli`

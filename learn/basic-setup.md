@@ -1,4 +1,4 @@
-# 1. Basic Gridsome
+# 1. Basic Gridmix
 
 ## Install the starter
 
