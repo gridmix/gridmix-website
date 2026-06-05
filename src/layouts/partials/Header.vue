@@ -12,7 +12,7 @@
       <nav class="header-actions flex">
         <ToggleTheme />
 
-        <a
+<!--        <a
           aria-label="Twitter"
           href="//twitter.com/fyodorio"
           rel="noopener noreferrer"
@@ -20,9 +20,9 @@
           title="Follow us on Twitter"
         >
           <twitter-logo/>
-        </a>
+        </a>-->
 
-        <a
+<!--        <a
           aria-label="Discord"
           href="//discord.gg/daeay6n"
           rel="noopener noreferrer"
@@ -31,7 +31,7 @@
           title="Join our discord"
         >
           <discord-logo/>
-        </a>
+        </a>-->
 
         <div class="has-dropdown">
           <a

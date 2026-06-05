@@ -5,7 +5,7 @@
       <AisInstantSearchSsr class="sidebar plugins__sidebar">
         <AisConfigure
           :hitsPerPage="hitsPerPage"
-          :analyticsTags="['gridsome']"
+          :analyticsTags="['gridmix']"
           :filters="filters"
         />
 
@@ -164,7 +164,7 @@ export default {
                 ...owner,
                 name: 'gridmix',
                 link: 'https://www.npmjs.com/org/gridmix',
-                avatar: 'https://avatars0.githubusercontent.com/u/17981963?s=200&v=4'
+                avatar: 'https://avatars.githubusercontent.com/u/285744248?s=200&v=4'
               }
             }
 
