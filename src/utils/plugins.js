@@ -4,13 +4,13 @@ const client = algoliasearch('OFCNCOG2CU', 'e0925566b9cfa7d0d21586a0b365d78c')
 const index = client.initIndex('npm-search')
 
 const hits = []
-const exclude = ['gridsome', '@gridsome/cli']
+const exclude = ['gridmix', '@gridmix/cli']
 
 export function browseAll (query = '') {
   if (query) hits.splice(0, hits.length)
 
   const browser = index.browseAll(query, {
-    filters: 'keywords:gridsome-plugin AND deprecated:false',
+    filters: 'keywords:gridmix-plugin AND deprecated:false',
     typoTolerance: false
   })
 

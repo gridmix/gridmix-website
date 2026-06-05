@@ -6,7 +6,7 @@
       and
     <a
       class="plain"
-      href="//github.com/gridsome/gridsome/graphs/contributors"
+      href="//github.com/gridmix/gridmix/graphs/contributors"
       rel="noopener noreferrer"
       target="_blank"
     >Contributors</a>.

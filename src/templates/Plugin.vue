@@ -11,7 +11,7 @@
 
         <div class="plugins__search">
           <div class="plugins__search-box">
-            <AisSearchBox placeholder="Search for Gridsome plugins" />
+            <AisSearchBox placeholder="Search for Gridmix plugins" />
           </div>
           <div class="flex flex-space-between">
             <AisStateResults v-slot="{ nbHits }">
@@ -52,7 +52,7 @@
                     <span class="plugin-post__users-name" v-if="owners.length == 1">
                       {{ owner.name }}
 
-                      <i v-if="owner.name == 'gridsome'" class="plugin-post__users-tag">Official Plugin</i>
+                      <i v-if="owner.name == 'gridmix'" class="plugin-post__users-tag">Official Plugin</i>
                     </span>
                   </a>
                 </span>
@@ -81,8 +81,8 @@
           <div class="plugins-intro container-sm post">
             <Connect />
             <div class="plugins-intro__text">
-              <h1>Gridsome Plugins</h1>
-              <p class="lead">Gridsome plugins are NPM packages that you can install to any project. <span class="hide-for-small">Use the search bar to the left to find a plugin.</span></p>
+              <h1>Gridmix Plugins</h1>
+              <p class="lead">Gridmix plugins are NPM packages that you can install to any project. <span class="hide-for-small">Use the search bar to the left to find a plugin.</span></p>
 
               <p>Want to contribute to plugins library? <g-link to="/docs/how-to-create-a-plugin">Learn how to build a plugin</g-link></p>
             </div>
@@ -140,7 +140,7 @@ export default {
     return {
       hit: null,
       hitsPerPage: 50,
-      filters: 'keywords:gridsome-plugin AND deprecated:false'
+      filters: 'keywords:gridmix-plugin AND deprecated:false'
     }
   },
 
@@ -159,11 +159,11 @@ export default {
     owners () {
       return this.hit
         ? this.hit.owners.map(owner => {
-            if (owner.name === 'hjvedvik') {
+            if (owner.name === 'fyodorio') {
               return {
                 ...owner,
-                name: 'gridsome',
-                link: 'https://www.npmjs.com/org/gridsome',
+                name: 'gridmix',
+                link: 'https://www.npmjs.com/org/gridmix',
                 avatar: 'https://avatars0.githubusercontent.com/u/17981963?s=200&v=4'
               }
             }

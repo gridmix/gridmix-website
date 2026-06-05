@@ -18,7 +18,7 @@
 
         <p class="home-info">
           <span>Open-source MIT Licensed. </span>
-          <a href="//github.com/gridsome/gridsome" target="_blank" rel="noopener noreferrer">
+          <a href="//github.com/gridmix/gridmix" target="_blank" rel="noopener noreferrer">
             <span>GitHub (v{{ $static.metaData.gridmixVersion }})</span>
           </a>
         </p>

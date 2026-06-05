@@ -14,7 +14,7 @@
 
         <a
           aria-label="Twitter"
-          href="//twitter.com/gridsome"
+          href="//twitter.com/fyodorio"
           rel="noopener noreferrer"
           target="_blank"
           title="Follow us on Twitter"
@@ -36,10 +36,10 @@
         <div class="has-dropdown">
           <a
             aria-label="GitHub"
-            href="//github.com/gridsome"
+            href="//github.com/gridmix"
             rel="noopener noreferrer"
             target="_blank"
-            title="Gridsome @ GitHub"
+            title="Gridmix @ GitHub"
           >
             <github-logo
               height="20px"
@@ -51,19 +51,19 @@
             >v{{ $static.metadata.gridmixVersion }}</span>
           </a>
           <div class="dropdown">
-            <a href="//github.com/gridsome/gridsome" rel="noopener noreferrer" target="_blank">
+            <a href="//github.com/gridmix/gridmix" rel="noopener noreferrer" target="_blank">
               Core Repository
             </a>
-            <a href="//github.com/gridsome/gridsome/blob/master/gridsome/CHANGELOG.md" rel="noopener noreferrer" target="_blank">
+            <a href="//github.com/gridmix/gridmix/blob/main/gridmix/CHANGELOG.md" rel="noopener noreferrer" target="_blank">
               Core Changelog
             </a>
-            <a href="//github.com/gridsome/gridsome/issues" rel="noopener noreferrer" target="_blank">
+            <a href="//github.com/gridmix/gridmix/issues" rel="noopener noreferrer" target="_blank">
               Core Issues
             </a>
-             <a href="//github.com/gridsome/gridsome/projects/2" rel="noopener noreferrer" target="_blank">
-              Gridsome Roadmap
-            </a>
-            <a href="//github.com/gridsome/gridsome.org" rel="noopener noreferrer" target="_blank">
+<!--             <a href="//github.com/gridsome/gridsome/projects/2" rel="noopener noreferrer" target="_blank">
+              Gridmix Roadmap
+            </a>-->
+            <a href="//github.com/gridmix/gridmix-website" rel="noopener noreferrer" target="_blank">
               Website Repository
             </a>
           </div>

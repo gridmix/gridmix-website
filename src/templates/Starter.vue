@@ -40,11 +40,11 @@
 
             <div slot="content">
               <p style="margin-bottom: .5rem; display: block;">
-              Install locally with <strong><g-link to="/docs/gridsome-cli/">Gridsome CLI</g-link></strong>
+              Install locally with <strong><g-link to="/docs/gridsome-cli/">Gridmix CLI</g-link></strong>
               </p>
               <div class="mb">
                 <code class="starter__command flex">
-                  <span ref="command">gridsome create my-project {{ $page.starter.repo }}</span>
+                  <span ref="command">gridmix create my-project {{ $page.starter.repo }}</span>
                   <button class="button button--xsmall" @click="copyCommand()">
                     <ClipboardIcon title="Copy to clipboard" width="16" height="16" />
                     <span style="margin-left: 0"> Copy </span>

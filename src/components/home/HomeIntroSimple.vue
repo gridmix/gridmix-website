@@ -7,7 +7,7 @@
         </h1>
 
         <p class="intro__lead lead post mb">
-          Gridsome makes it easy for developers to build static generated websites & apps that are <g-link to="/docs/fast-by-default/">fast by default</g-link> 🚀
+          Gridmix makes it easy for developers to build static generated websites & apps that are <g-link to="/docs/fast-by-default/">fast by default</g-link> 🚀
         </p>
 
         <p class="intro__links">
@@ -18,7 +18,7 @@
 
         <p class="intro__info">
           <span>Open-source MIT Licensed. </span>
-          <a href="//github.com/gridsome/gridsome" target="_blank" rel="noopener noreferrer">
+          <a href="//github.com/gridmix/gridmix" target="_blank" rel="noopener noreferrer">
             <span>GitHub (v{{ $static.metadata.gridmixVersion }})</span>
           </a>
         </p>

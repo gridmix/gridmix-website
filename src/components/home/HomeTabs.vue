@@ -1,11 +1,11 @@
 <template>
   <Section dots="true">
     <div class="homepage-features container post">
-      
+
       <div class="grid-cols grid-cols--2 mb">
         <div style="order:2">
           <h3>All your data in one place</h3>
-          <p>Gridsome brings all your data into a <strong>unified GraphQL data layer</strong>. The data can be browsed and explored in a simple local interface (GraphQL Playground) and inserted to any Vue Component. </p>
+          <p>Gridmix brings all your data into a <strong>unified GraphQL data layer</strong>. The data can be browsed and explored in a simple local interface (GraphQL Playground) and inserted to any Vue Component. </p>
 
           <ul class="bullet-list">
             <li><Bullet /> Pull data from any CMS, files or data APIs</li>
@@ -37,7 +37,7 @@
         <div>
           <div v-html="$static.example.content" />
         </div>
-   
+
       </div>
 
 
@@ -57,7 +57,7 @@
         <div>
           <g-image alt="Safe deployment" width="1100" src="~/assets/images/static.png" />
         </div>
-   
+
       </div>
 
     </div>

@@ -2,7 +2,7 @@
   <Section dots="true" class="post"  dark="true">
 
       <h5 class="text-center">
-        How Gridsome Works
+        How Gridmix Works
       </h5>
 
       <h2 class="text-center primary-color container-sm">

@@ -3,7 +3,7 @@
     <h2 class="text-center">High performance baked-in ⚡️🚀</h2>
 
     <p class="lead text-center container-md ">
-       Gridsome makes it easy and fun for developers to create fast, beautiful websites without needing to become a performance expert.
+       Gridmix makes it easy and fun for developers to create fast, beautiful websites without needing to become a performance expert.
     </p>
 
     <div class="grid-cols grid-cols--2 container-md mb">

@@ -9,7 +9,7 @@
     - title: Deployment
       link: /docs/deployment/
 
-- title : Basic Gridsome
+- title : Basic Gridmix
   items:
     - title: Directory structure
       link: /docs/directory-structure/
@@ -57,7 +57,7 @@
 
 - title : Styles and Assets
   items:
-    - title: Use CSS in Gridsome
+    - title: Use CSS in Gridmix
       link: /docs/assets-css/
     - title: Add custom fonts
       link: /docs/assets-fonts/
@@ -87,7 +87,7 @@
 
 - title: API Reference
   items:
-    - title: Gridsome CLI
+    - title: Gridmix CLI
       link: /docs/gridsome-cli/
     - title: Server API
       link: /docs/server-api/

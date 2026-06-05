@@ -16,7 +16,7 @@
       <a href="//discord.gg/daeay6n" rel="noopener noreferrer" target="_blank">
         #{{ $page.platform.title }}
       </a>
-      community channel in Gridsome Discord.
+      community channel in Gridmix Discord.
     </p>
 
   </Starters>

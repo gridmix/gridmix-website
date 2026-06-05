@@ -10,31 +10,31 @@
 
       <Feature>
         <h3>Fast by default</h3>
-        <p>Gridsome builds ultra performance into every page by using the <g-link to="/docs/fast-by-default/#the-prpl-pattern">PRPL pattern</g-link>. You get <strong>code splitting, asset optimization, progressive images, and link prefetching</strong> out of the box. Gridsome sites get almost perfect page speed scores by default.
+        <p>Gridmix builds ultra performance into every page by using the <g-link to="/docs/fast-by-default/#the-prpl-pattern">PRPL pattern</g-link>. You get <strong>code splitting, asset optimization, progressive images, and link prefetching</strong> out of the box. Gridmix sites get almost perfect page speed scores by default.
         </p>
       </Feature>
 
       <Feature>
         <h3>PWA-ready</h3>
-         <p>Gridsome generates static PWAs. Only critical HTML, CSS, and JavaScript get loaded first. The next pages are then prefetched so users can click around incredibly fast without page reloads, even when offline.
+         <p>Gridmix generates static PWAs. Only critical HTML, CSS, and JavaScript get loaded first. The next pages are then prefetched so users can click around incredibly fast without page reloads, even when offline.
           </p>
       </Feature>
 
       <Feature>
         <h3>Build on the Jamstack</h3>
-        <p>The future of the web is JavaScript, APIs, and Markup - <g-link to="/docs/jamstack/">the Jamstack</g-link>. Gridsome uses the power of blazing fast static site generation, JavaScript and APIs to create stunning modern web experiences.</p>
+        <p>The future of the web is JavaScript, APIs, and Markup - <g-link to="/docs/jamstack/">the Jamstack</g-link>. Gridmix uses the power of blazing fast static site generation, JavaScript and APIs to create stunning modern web experiences.</p>
       </Feature>
 
 
       <Feature>
         <h3>Simple, safe deployment</h3>
-        <p><strong>No servers. No databases. Only files.</strong> Deploy your entire site to a CDN and forget about it. A Gridsome site can handle thousands to millions of hits without breaking - and no expensive server costs.
+        <p><strong>No servers. No databases. Only files.</strong> Deploy your entire site to a CDN and forget about it. A Gridmix site can handle thousands to millions of hits without breaking - and no expensive server costs.
         </p>
       </Feature>
 
       <Feature>
         <h3>SEO-friendly</h3>
-        <p>Gridsome sites load as static HTML before they hydrate into fully Vue.js-powered SPAs. This makes it possible for search engines to be able to crawl content and give better SEO ranking, and still have all the power of Vue.js.</p>
+        <p>Gridmix sites load as static HTML before they hydrate into fully Vue.js-powered SPAs. This makes it possible for search engines to be able to crawl content and give better SEO ranking, and still have all the power of Vue.js.</p>
       </Feature>
 
     </div>

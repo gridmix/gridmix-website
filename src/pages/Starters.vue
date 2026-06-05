@@ -1,7 +1,7 @@
 <template>
   <Starters>
-    <h1>Gridsome Starters</h1>
-    <p class="mb-x2">Kickstart your Gridsome website with premade projects.</p>
+    <h1>Gridmix Starters</h1>
+    <p class="mb-x2">Kickstart your Gridmix website with premade projects.</p>
 
     <div class="grid-cols grid-cols--3 mb">
       <StarterCard v-for="starter in $page.defaultStarters.edges" :key="starter.node.id" :node="starter.node"  />
