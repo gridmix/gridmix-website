@@ -1,26 +1,32 @@
 <template>
-	<Card class="newsletter" id="mc_embed_signup">
+	<Card class="newsletter">
 		<p class="mb-half"><strong>👋 Stay in the loop.</strong> Subscribe to Gridmix newsletter!</p>
-		<form action="https://gridsome.us19.list-manage.com/subscribe/post?u=960a357f3405a688ff935a10e&amp;id=42bbd30818" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="newsletter__form validate" target="_blank" novalidate>
-		<div id="mc_embed_signup_scroll" class="flex">
-
-			<div class="newsletter__field mc-field-group flex-fit" style="margin-right: 15px">
-				<input  type="email" aria-label="Email" placeholder="your@email.com" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+		<form
+      action="https://buttondown.com/api/emails/embed-subscribe/gridmix"
+      method="post"
+      class="newsletter__form validate"
+      target="_blank"
+      novalidate>
+		<div class="flex">
+			<div class="newsletter__field flex-fit" style="margin-right: 15px">
+				<input
+          type="email"
+          aria-label="Email"
+          placeholder="your@email.com"
+          value=""
+          name="email"
+          class="required email"
+          id="bd-email">
 			</div>
 
 			<div class="newsletter__button">
-				<button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button primary">
+				<button
+          type="submit"
+          value="Subscribe"
+          class="button primary">
 					Subscribe
 				</button>
 			</div>
-
-			<div id="mce-responses" class="clear">
-				<div class="response" id="mce-error-response" style="display:none"></div>
-				<div class="response" id="mce-success-response" style="display:none"></div>
-			</div>
-	  	<div style="position: absolute; left: -5000px;" aria-hidden="true">
-	  		<input type="text" name="b_960a357f3405a688ff935a10e_42bbd30818" tabindex="-1" value="">
-	  	</div>
 	   </div>
 		</form>
 		<div class="newsletter__top"></div>
