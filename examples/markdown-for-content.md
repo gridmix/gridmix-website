@@ -1,17 +1,17 @@
 ---
 title: Use Markdown for data
-filepath: gridsome.config.js
+filepath: gridmix.config.js
 filetype: js
 order: 4
 ---
 ```js
 module.exports = {
   siteName: 'My Markdown Blog',
-  siteDescription: 'Gridsome 💚 Markdown',
+  siteDescription: 'Gridmix 💚 Markdown',
   plugins: [
     {
       // Example usage of Markdown for content
-      use: '@gridsome/source-filesystem',
+      use: '@gridmix/source-filesystem',
       options: {
         path: 'posts/**/*.md', // What files to use
         typeName: 'Post', // GraphQL type name

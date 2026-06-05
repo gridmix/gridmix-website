@@ -1,16 +1,16 @@
 ---
 title: Get data from CMS & APIs with source plugins
-filepath: gridsome.config.js
+filepath: gridmix.config.js
 filetype: js
 order: 3
 ---
 ```js
 module.exports = {
-  siteName: 'My Gridsome Website',
+  siteName: 'My Gridmix Website',
   siteDescription: '...is faster than yours',
   plugins: [
     {
-      use: '@gridsome/source-contentful',
+      use: '@gridmix/source-contentful',
       options: {
         host: 'cdn.contentful.com',
         typeName: 'Contentful',

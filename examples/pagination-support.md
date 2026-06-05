@@ -36,7 +36,7 @@ query ($page: Int) {
 
 <script>
 // Import pagination component
-import { Pager } from 'gridsome'
+import { Pager } from 'gridmix'
 
 export default {
   components: {

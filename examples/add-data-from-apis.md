@@ -1,6 +1,6 @@
 ---
 title: Use data from any APIs
-filepath: gridsome.server.js
+filepath: gridmix.server.js
 filetype: js
 order: 2
 ---

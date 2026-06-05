@@ -1,6 +1,6 @@
 ---
 title: Programmatically generate pages 
-filepath: gridsome.server.js
+filepath: gridmix.server.js
 filetype: js
 order: 10
 ---
