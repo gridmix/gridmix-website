@@ -19,3 +19,11 @@ The linter can automatically fix certain classes of failure. To accept these fix
 ```shell
 yarn markdown:fix
 ```
+
+## Deploying to GitHub pages
+
+There's a dedicated bash script responsible for that — does everything manually and locally, assuming the corresponding `gridmix/gridmix.github.io` repository is cloned alongside. To trigger the deployment process (build + copy + submit) run:
+
+```shell
+pnpm deploy
+```
