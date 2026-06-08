@@ -27,3 +27,9 @@
   bio: "Official Gridmix Projects"
   avatar: ./images/gridmix.png
   twitter: "@fyodorio"
+
+- id: codybarr
+  name: Cody Barr
+  bio: "Web Developer"
+  avatar: ./images/codybarr.jpg
+  twitter: "@codybarr"
