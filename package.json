@@ -6,6 +6,7 @@
     "develop": "gridmix develop",
     "explore": "gridmix explore",
     "build": "gridmix build",
+    "deploy": "bash scripts/deploy.sh",
     "markdown:lint": "markdownlint '**/*.md' --ignore node_modules",
     "markdown:fix": "markdownlint '**/*.md' --ignore node_modules --fix"
   },
