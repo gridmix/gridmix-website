@@ -63,11 +63,6 @@ query {
   starters: allStarter (
     sortBy: "index"
     order: DESC
-    filter: {
-      featured: {
-        ne: true
-      }
-    }
   ) {
     edges {
       node {

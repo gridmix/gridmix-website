@@ -148,13 +148,9 @@ Gridmix [Critical CSS plugin](/plugins/@gridmix/plugin-critical) extracts CSS fr
 
 [TailwindCSS](https://tailwindcss.com) is a highly customizable, utility-based CSS framework that gives you all of the building blocks you need to build your project without any opinionated styles you have to fight to override. When using TailwindCSS, it is recommended to use [PostCSS-PurgeCSS](https://github.com/FullHuman/postcss-purgecss) which is a tool used to remove unused CSS; resulting in tiny file sizes.
 
-### Add TailwindCSS with a Plugin
+### Add TailwindCSS
 
-The quickest and easiest way to get up and running with Tailwind CSS in your project is to install it with the [Gridmix Tailwind Plugin](/plugins/gridmix-plugin-tailwindcss). A Gridmix plugin will typically have the majority of the boilerplate and configuration done for you, eliminating a lot of the set up time.
-
-### Add TailwindCSS Manually
-
-If you prefer to do the install and configuration on your own, you can add TailwindCSS manually with the following instructions.
+You can add TailwindCSS manually with the following instructions.
 
 To install TailwindCSS (choose one):
 ```shell
