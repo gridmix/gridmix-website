@@ -31,7 +31,7 @@ export default {
 
 <static-query>
 query {
-  posts: allBlogPost {
+  posts: allBlogPost (sortBy: "date", order: DESC, limit: 3) {
     edges {
       node {
         id
