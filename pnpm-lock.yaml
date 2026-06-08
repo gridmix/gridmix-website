@@ -11,9 +11,6 @@ importers:
       '@gridmix/plugin-google-analytics':
         specifier: 0.2.0-alpha.0
         version: 0.2.0-alpha.0
-      algoliasearch:
-        specifier: ^3.32.0
-        version: 3.35.1
       clipboard-copy:
         specifier: ^3.0.0
         version: 3.2.0
@@ -32,9 +29,6 @@ importers:
       typography:
         specifier: ^0.16.18
         version: 0.16.24
-      vue-instantsearch:
-        specifier: ^2.0.0
-        version: 2.7.1(algoliasearch@3.35.1)(vue@2.7.16)
       vue-lazy-hydration:
         specifier: ^1.0.0-beta.7
         version: 1.0.0-beta.14
@@ -1756,12 +1750,6 @@ packages:
   ajv@8.20.0:
     resolution: {integrity: sha512-Thbli+OlOj+iMPYFBVBfJ3OmCAnaSyNn4M1vz9T6Gka5Jt9ba/HIR56joy65tY6kx/FCF5VXNB819Y7/GUrBGA==}
 
-  algoliasearch-helper@2.28.1:
-    resolution: {integrity: sha512-4yg3anWdILD6ZJ/GxWmtu4HgxauSemhSqbe9Cx6SFdPzaMHrccew4IDomMeQlz9RHJwRgi5sEeX//jx2H/PaWg==}
-    deprecated: 3.7.3
-    peerDependencies:
-      algoliasearch: '>= 3.1 < 5'
-
   algoliasearch@3.35.1:
     resolution: {integrity: sha512-K4yKVhaHkXfJ/xcUnil04xiSrB8B8yHZoFEhWNpXg23eiCnqvTZw1tn/SqvdsANlYHLJlKl0qi3I/Q2Sqo7LwQ==}
     engines: {node: '>=0.8'}
@@ -2229,9 +2217,6 @@ packages:
   class-utils@0.3.6:
     resolution: {integrity: sha512-qOhPa/Fj7s6TY8H8esGu5QNpMMQxz79h+urzrNYN6mn+9BnxlDGf5QZ+XeCDsxSjPqsSR56XOZOJmpeurnLMeg==}
     engines: {node: '>=0.10.0'}
-
-  classnames@2.5.1:
-    resolution: {integrity: sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==}
 
   clean-css@5.3.3:
     resolution: {integrity: sha512-D5J+kHaVb/wKSFcyyV75uCn8fiY4sV38XJoe4CUyGQ+mOU/fMVYUdH1hJC+CJQ5uY3EnW27SbJYS4X8BiLrAFg==}
@@ -3968,9 +3953,6 @@ packages:
   immediate@3.3.0:
     resolution: {integrity: sha512-HR7EVodfFUdQCTIeySw+WDRFJlPcLOJbXfwwZ7Oom6tjsvZ3bOkCDJHehQC3nxJrv7+f9XecwazynjU8e4Vw3Q==}
 
-  immutability-helper@2.9.1:
-    resolution: {integrity: sha512-r/RmRG8xO06s/k+PIaif2r5rGc3j4Yhc01jSBfwPCXDLYZwp/yxralI37Df1mwmuzcCsen/E/ITKcTEvc1PQmQ==}
-
   immutable@5.1.6:
     resolution: {integrity: sha512-q1swsS8K7L8usSHuOqF2TAoCCkonYz0SG38wLAggaa4Wml70zixIvt2ql4coQ2C2B3hTjltJry4r6bULwgAXLQ==}
 
@@ -4021,9 +4003,6 @@ packages:
   inquirer@7.3.3:
     resolution: {integrity: sha512-JG3eIAj5V9CwcGvuOmoo6LB9kbAYT8HXffUl6memuszlwDC/qvFAJw49XJ5NROSFNPxp3iQg1GqkFhaY/CR0IA==}
     engines: {node: '>=8.0.0'}
-
-  instantsearch.js@3.7.0:
-    resolution: {integrity: sha512-Hkj72CP/Du7uR6R8N2IXo/JHiGU9Z/DwDbQcvRaLKWGd3fc4WjQpl1QPB2OUsoM0Ym0Zv1xjyYTmuU1VvGdySw==}
 
   internal-slot@1.1.0:
     resolution: {integrity: sha512-4gd7VpWNQNB4UKKCFFVcp1AVv+FMOgs9NKzjHKusc8jTMhd5eL1NqQqOpE0KzMds804/yHlglp3uxgluOqAPLw==}
@@ -5605,32 +5584,6 @@ packages:
   potrace@2.1.8:
     resolution: {integrity: sha512-V9hI7UMJyEhNZjM8CbZaP/804ZRLgzWkCS9OOYnEZkszzj3zKR/erRdj0uFMcN3pp6x4B+AIZebmkQgGRinG/g==}
 
-  preact-compat@3.19.0:
-    resolution: {integrity: sha512-f83A4hIhH8Uzhb9GbIcGk8SM19ffWlwP9mDaYwQdRnMdekZwcCA7eIAbeV4EMQaV9C0Yuy8iKgBAtyTKPZQt/Q==}
-    peerDependencies:
-      preact: <10
-
-  preact-context@1.1.4:
-    resolution: {integrity: sha512-gcCjPJ65R0MiW9hDu8W/3WAmyTElIvwLyEO6oLQiM6/TbLKLxCpBCWV8GJjx52TTEyUr60HLDcmoCXZlslelzQ==}
-    peerDependencies:
-      preact: ^8.2.7
-
-  preact-render-to-string@3.8.2:
-    resolution: {integrity: sha512-przuZPajiurStGgxMoJP0EJeC4xj5CgHv+M7GfF3YxAdhGgEWAkhOSE0xympAFN20uMayntBZpttIZqqLl77fw==}
-    peerDependencies:
-      preact: '*'
-
-  preact-rheostat@2.1.1:
-    resolution: {integrity: sha512-d03JgkpbjknALYl+zfNiJQ60sFd4A0YjnLCe/DB+rqKQck7jXpsW9RqSN0R50/lV8fEezhVCjq2WMPDDOKmwaA==}
-
-  preact-transition-group@1.1.1:
-    resolution: {integrity: sha512-v89XLodCvylf5lMrhI+LqIhDsAjWfiDKV4keAU+L5yDtxmqn8uvjZXn+haKMEG0x0PZz81own19SuNJD5NlOFQ==}
-    peerDependencies:
-      preact: '*'
-
-  preact@8.5.3:
-    resolution: {integrity: sha512-O3kKP+1YdgqHOFsZF2a9JVdtqD+RPzCQc3rP+Ualf7V6rmRDchZ9MJbiGTT7LuyqFKZqlHSOyO/oMFmI2lVTsw==}
-
   prepend-http@2.0.0:
     resolution: {integrity: sha512-ravE6m9Atw9Z/jjttRUZ+clIXogdghyZAuWJ3qEzjT+jI/dL1ifAqhZeC5VHzQp1MSt1+jxKkFNemj/iO7tVUA==}
     engines: {node: '>=4'}
@@ -5642,9 +5595,6 @@ packages:
 
   pretty-error@4.0.0:
     resolution: {integrity: sha512-AoJ5YMAcXKYxKhuJGdcvse+Voc6v1RgnsR3nWcYU7q4t6z0Q6T86sv5Zq8VIRbOWWFpvdGE83LtdSMNd+6Y0xw==}
-
-  pretty-format@3.8.0:
-    resolution: {integrity: sha512-WuxUnVtlWL1OfZFQFuqvnvs6MiAGk9UNsBostyBOB0Is9wb5uRESevA6rnl/rkksXaGX3GzZhPup5d6Vp1nFew==}
 
   prismjs@1.30.0:
     resolution: {integrity: sha512-DEvV2ZF2r2/63V+tK8hQvrR2ZGn10srHbXviTlcv7Kpzw8jWiNTqbVgjO3IY8RxrrOUF8VPMQQFysYYYv0YZxw==}
@@ -5659,9 +5609,6 @@ packages:
   process@0.11.10:
     resolution: {integrity: sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==}
     engines: {node: '>= 0.6.0'}
-
-  prop-types@15.8.1:
-    resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
 
   property-information@5.6.0:
     resolution: {integrity: sha512-YUHSPk+A30YPv+0Qf8i9Mbfe/C0hdPXk1s1jPVToV8pk8BQtpw10ct89Eo7OWkutrwqvT0eicAxlOg3dOAu8JA==}
@@ -5757,9 +5704,6 @@ packages:
   rc@1.2.8:
     resolution: {integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==}
     hasBin: true
-
-  react-is@16.13.1:
-    resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
   read-pkg-up@7.0.1:
     resolution: {integrity: sha512-zK0TB7Xd6JpCLmlLmufqykGE+/TlOePD6qKClNW7hHDKFh/J7/7gCWGR7joEQEW1bKq3a3yUZSObOoWLFQ4ohg==}
@@ -6305,9 +6249,6 @@ packages:
 
   stackframe@1.3.4:
     resolution: {integrity: sha512-oeVtt7eWQS+Na6F//S4kJ2K2VbRlS9D43mAlMyVpVWovy9o+jfgH8O9agzANzaiLjclA0oYzUXEM4PurhSUChw==}
-
-  standalone-react-addons-pure-render-mixin@0.1.1:
-    resolution: {integrity: sha512-HFkwqpJmvz4vxHyzdeUcjtsp8Am+NauLXdU2/YXT1/InPbszaRo1cLPAy/58H7oOPNNjteqHcv04JEw+d9C+Xw==}
 
   state-toggle@1.0.3:
     resolution: {integrity: sha512-d/5Z4/2iiCnHw6Xzghyhb+GcmF89bxwgXG60wjIiZaxnymbyOmI8Hk4VqHXiVVp6u2ysaskFfXg3ekCj4WNftQ==}
@@ -6902,12 +6843,6 @@ packages:
 
   vue-hot-reload-api@2.3.4:
     resolution: {integrity: sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog==}
-
-  vue-instantsearch@2.7.1:
-    resolution: {integrity: sha512-A4LpbsgT7m1ki2BGP0TxXjYrlS7+9APmdrXu8yiEszH+g/qbGQQoeBkgVjRkChR/EAICUo9GKtOt1kjY029ALQ==}
-    peerDependencies:
-      algoliasearch: '>= 3.32.0 < 5'
-      vue: ^2.4.0
 
   vue-lazy-hydration@1.0.0-beta.14:
     resolution: {integrity: sha512-Xm6e1SL9WBlmMWIDThteOUGyiBNGyPTG4S5KZLMlbJZEvTzRpqAAiFhg4BQyohwufyvpj+WTdr63fhNxK43RQA==}
@@ -9262,13 +9197,6 @@ snapshots:
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
 
-  algoliasearch-helper@2.28.1(algoliasearch@3.35.1):
-    dependencies:
-      algoliasearch: 3.35.1
-      events: 1.1.1
-      lodash: 4.18.1
-      qs: 6.15.2
-
   algoliasearch@3.35.1:
     dependencies:
       agentkeepalive: 2.2.0
@@ -9866,8 +9794,6 @@ snapshots:
       define-property: 0.2.5
       isobject: 3.0.1
       static-extend: 0.1.2
-
-  classnames@2.5.1: {}
 
   clean-css@5.3.3:
     dependencies:
@@ -11837,10 +11763,6 @@ snapshots:
 
   immediate@3.3.0: {}
 
-  immutability-helper@2.9.1:
-    dependencies:
-      invariant: 2.2.4
-
   immutable@5.1.6: {}
 
   import-fresh@3.3.1:
@@ -11918,20 +11840,6 @@ snapshots:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       through: 2.3.8
-
-  instantsearch.js@3.7.0(algoliasearch@3.35.1):
-    dependencies:
-      algoliasearch-helper: 2.28.1(algoliasearch@3.35.1)
-      classnames: 2.5.1
-      events: 1.1.1
-      hogan.js: 3.0.2
-      preact: 8.5.3
-      preact-compat: 3.19.0(preact@8.5.3)
-      preact-rheostat: 2.1.1
-      prop-types: 15.8.1
-      qs: 6.15.2
-    transitivePeerDependencies:
-      - algoliasearch
 
   internal-slot@1.1.0:
     dependencies:
@@ -13454,38 +13362,6 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  preact-compat@3.19.0(preact@8.5.3):
-    dependencies:
-      immutability-helper: 2.9.1
-      preact: 8.5.3
-      preact-context: 1.1.4(preact@8.5.3)
-      preact-render-to-string: 3.8.2(preact@8.5.3)
-      preact-transition-group: 1.1.1(preact@8.5.3)
-      prop-types: 15.8.1
-      standalone-react-addons-pure-render-mixin: 0.1.1
-
-  preact-context@1.1.4(preact@8.5.3):
-    dependencies:
-      preact: 8.5.3
-
-  preact-render-to-string@3.8.2(preact@8.5.3):
-    dependencies:
-      preact: 8.5.3
-      pretty-format: 3.8.0
-
-  preact-rheostat@2.1.1:
-    dependencies:
-      object.assign: 4.1.7
-      preact: 8.5.3
-      preact-compat: 3.19.0(preact@8.5.3)
-      prop-types: 15.8.1
-
-  preact-transition-group@1.1.1(preact@8.5.3):
-    dependencies:
-      preact: 8.5.3
-
-  preact@8.5.3: {}
-
   prepend-http@2.0.0: {}
 
   prettier@2.8.8:
@@ -13495,8 +13371,6 @@ snapshots:
     dependencies:
       lodash: 4.18.1
       renderkid: 3.0.0
-
-  pretty-format@3.8.0: {}
 
   prismjs@1.30.0: {}
 
@@ -13514,12 +13388,6 @@ snapshots:
   process-nextick-args@2.0.1: {}
 
   process@0.11.10: {}
-
-  prop-types@15.8.1:
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-      react-is: 16.13.1
 
   property-information@5.6.0:
     dependencies:
@@ -13625,8 +13493,6 @@ snapshots:
       ini: 1.3.8
       minimist: 1.2.8
       strip-json-comments: 2.0.1
-
-  react-is@16.13.1: {}
 
   read-pkg-up@7.0.1:
     dependencies:
@@ -14364,8 +14230,6 @@ snapshots:
 
   stackframe@1.3.4: {}
 
-  standalone-react-addons-pure-render-mixin@0.1.1: {}
-
   state-toggle@1.0.3: {}
 
   static-extend@0.1.2:
@@ -15000,13 +14864,6 @@ snapshots:
   vue-analytics@5.22.1: {}
 
   vue-hot-reload-api@2.3.4: {}
-
-  vue-instantsearch@2.7.1(algoliasearch@3.35.1)(vue@2.7.16):
-    dependencies:
-      algoliasearch: 3.35.1
-      algoliasearch-helper: 2.28.1(algoliasearch@3.35.1)
-      instantsearch.js: 3.7.0(algoliasearch@3.35.1)
-      vue: 2.7.16
 
   vue-lazy-hydration@1.0.0-beta.14: {}
 

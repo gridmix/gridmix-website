@@ -2,79 +2,71 @@
   <Layout :footer="false">
     <div class="plugins container flex flex-align-top" style="position: relative;">
 
-      <AisInstantSearchSsr class="sidebar plugins__sidebar">
-        <AisConfigure
-          :hitsPerPage="hitsPerPage"
-          :analyticsTags="['gridmix']"
-          :filters="filters"
-        />
-
+      <div class="sidebar plugins__sidebar">
         <div class="plugins__search">
           <div class="plugins__search-box">
-            <AisSearchBox placeholder="Search for Gridmix plugins" />
+            <input
+              v-model="query"
+              class="plugins__search-input"
+              type="search"
+              placeholder="Search for Gridmix plugins"
+            />
           </div>
           <div class="flex flex-space-between">
-            <AisStateResults v-slot="{ nbHits }">
-              <span class="plugins__count small">{{ nbHits }} plugins</span>
-            </AisStateResults>
-            <ClientOnly>
-              <AisPoweredBy />
-            </ClientOnly>
+            <span class="plugins__count small">{{ filteredPlugins.length }} plugins</span>
           </div>
         </div>
 
-        <AisInfiniteHits class="plugins__list">
-          <template v-slot:item="{ item }">
-            <li class="plugin" :class="hitClasses(item)">
-              <AisHighlight class="plugin__name" :hit="item" attribute="name" />
-              <AisHighlight class="plugin__description" :hit="item" attribute="description" />
-              <g-link class="plugin__link" :to="`/plugins/${item.name}`">
-                Read more about {{ item.name }}
-              </g-link>
-            </li>
-          </template>
-          <template v-slot:loadMore="{ refine, isLastPage }">
-            <button v-if="!isLastPage" class="plugins__more button" @click="refine">
-              Show more plugins
-            </button>
-          </template>
-        </AisInfiniteHits>
-      </AisInstantSearchSsr>
+        <ul class="plugins__list">
+          <li
+            v-for="item in filteredPlugins"
+            :key="item.name"
+            class="plugin"
+            :class="hitClasses(item)"
+          >
+            <span class="plugin__name">{{ item.name }}</span>
+            <span class="plugin__description">{{ item.description }}</span>
+            <g-link class="plugin__link" :to="`/plugins/${item.name}`">
+              Read more about {{ item.name }}
+            </g-link>
+          </li>
+        </ul>
+      </div>
 
       <Section class="plugin-post" container="md">
         <template v-if="isSingle">
           <div class="plugin-post__meta" v-if="hit">
             <div class="plugin-post__meta_left">
               <div class="plugin-post__users">
-                <span v-for="owner in owners" :key="owner.name">
-                  <a :href="owner.link" target="_blank" rel="noopener">
-                    <img class="plugin-post__users-image" v-if="owner.avatar" :src="owner.avatar" :alt="owner.name" />
-                    <span class="plugin-post__users-name" v-if="owners.length == 1">
-                      {{ owner.name }}
-
-                      <i v-if="owner.name == 'gridmix'" class="plugin-post__users-tag">Official Plugin</i>
-                    </span>
-                  </a>
-                </span>
+                <a href="https://www.npmjs.com/org/gridmix" target="_blank" rel="noopener">
+                  <img class="plugin-post__users-image" src="https://avatars.githubusercontent.com/u/285744248?s=200&v=4" alt="gridmix" />
+                  <span class="plugin-post__users-name">
+                    gridmix
+                    <i class="plugin-post__users-tag">Official Plugin</i>
+                  </span>
+                </a>
               </div>
-
-
             </div>
             <div class="plugin-post__meta_right">
               <a
                 rel="noopener noreferrer"
                 target="_blank"
-                v-if="hit.repository" :href="hit.repository.url"
+                v-if="hit.repository" :href="hit.repository"
                 title="View on GitHub"
                 aria-label="View on GitHub"
                 class="button button--blank">
-                <div :is="repositoryIcon(hit.repository)" />
+                <GitHubLogo />
               </a>
-              <span>Downloads last month: {{ hit.humanDownloadsLast30Days }}</span>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                :href="`https://www.npmjs.com/package/${hit.name}`">
+                View on npm
+              </a>
             </div>
           </div>
 
-          <div class="plugin-post__content mb" v-if="hit" v-html="content" />
+          <div class="plugin-post__content mb" v-if="content" v-html="content" />
 
         </template>
         <template v-else>
@@ -95,60 +87,79 @@
 
 <script>
 import markdown from '../utils/markdown'
-import algoliasearch from 'algoliasearch/lite'
-import GitLabLogo from '~/assets/images/gitlab.svg'
 import GitHubLogo from '~/assets/images/github-logo.svg'
-import BitbucketLogo from '~/assets/images/bitbucket.svg'
 import Connect from '~/components/Connect.vue'
 
-import {
-  createInstantSearch,
-  AisInstantSearchSsr,
-  AisStateResults,
-  AisInfiniteHits,
-  AisHighlight,
-  AisConfigure,
-  AisSearchBox,
-  AisPoweredBy
-} from 'vue-instantsearch'
+// NOTE: Plugin discovery originally came from Algolia's public `npm-search`
+// index, filtered by `keywords:gridmix-plugin AND deprecated:false` (same
+// approach as the upstream gridsome.org I forked). After switching the npm
+// scope from `@gridsome` to `@gridmix`, the scoped packages were never picked
+// up by that public mirror — every `@gridmix/*` package 404s in npm-search
+// (only the unscoped `gridmix` package got indexed), so the dynamic list came
+// back empty. The credentials are fine; it's the third-party index I don't
+// control. Until/unless the `@gridmix/*` packages get indexed there, I ship
+// the curated static list below.
+// TODO: revisit going back to Algolia/npm-search-driven discovery (or stand up
+// our own index) once the @gridmix/* packages appear in the npm-search index.
+const PLUGINS = [
+  {
+    name: '@gridmix/source-filesystem',
+    description: 'Filesystem source for Gridmix',
+    repository: 'https://github.com/gridmix/gridmix/tree/main/packages/source-filesystem'
+  },
+  {
+    name: '@gridmix/transformer-remark',
+    description: 'Markdown transformer for Gridmix',
+    repository: 'https://github.com/gridmix/gridmix/tree/main/packages/transformer-remark'
+  },
+  {
+    name: '@gridmix/vue-remark',
+    description: 'Use Vue Components in Markdown',
+    repository: 'https://github.com/gridmix/gridmix/tree/main/packages/vue-remark'
+  },
+  {
+    name: '@gridmix/remark-prismjs',
+    description: 'Syntax highlighter for markdown code blocks',
+    repository: 'https://github.com/gridmix/gridmix/tree/main/packages/remark-prismjs'
+  },
+  {
+    name: '@gridmix/plugin-google-analytics',
+    description: 'Google Analytics plugin for Gridmix',
+    repository: 'https://github.com/gridmix/gridmix/tree/main/packages/plugin-google-analytics'
+  },
+  {
+    name: '@gridmix/plugin-critical',
+    description: 'Extracts and inlines critical-path (above-the-fold) CSS',
+    repository: 'https://github.com/gridmix/gridmix/tree/main/packages/plugin-critical'
+  }
+]
 
-const searchClient = algoliasearch(
-  'OFCNCOG2CU',
-  'e0925566b9cfa7d0d21586a0b365d78c'
-)
+// Turn a GitHub "tree" URL (…/gridmix/tree/main/packages/x) into the raw README
+// URL (…/raw.githubusercontent.com/gridmix/main/packages/x/README.md). Returns
+// null for any non-GitHub repository so we just render no content rather than
+// fetching a bad URL.
+function readmeUrlFor (repository) {
+  if (!repository || !repository.includes('github.com') || !repository.includes('/tree/')) {
+    return null
+  }
 
-const { instantsearch, rootMixin } = createInstantSearch({
-  indexName: 'npm-search',
-  searchClient
-})
+  return repository
+    .replace('https://github.com/', 'https://raw.githubusercontent.com/')
+    .replace('/tree/', '/') + '/README.md'
+}
 
 export default {
   components: {
     Connect,
-    AisPoweredBy,
-    AisSearchBox,
-    AisConfigure,
-    AisHighlight,
-    AisInfiniteHits,
-    AisStateResults,
-    AisInstantSearchSsr
+    GitHubLogo
   },
-
-  mixins: [rootMixin],
 
   data () {
     return {
       hit: null,
-      hitsPerPage: 50,
-      filters: 'keywords:gridmix-plugin AND deprecated:false'
+      query: '',
+      readme: ''
     }
-  },
-
-  serverPrefetch () {
-    return instantsearch.findResultsState({
-      hitsPerPage: this.hitsPerPage,
-      filters: this.filters
-    })
   },
 
   computed: {
@@ -156,27 +167,19 @@ export default {
       return Boolean(this.$route.params.id)
     },
 
-    owners () {
-      return this.hit
-        ? this.hit.owners.map(owner => {
-            if (owner.name === 'fyodorio') {
-              return {
-                ...owner,
-                name: 'gridmix',
-                link: 'https://www.npmjs.com/org/gridmix',
-                avatar: 'https://avatars.githubusercontent.com/u/285744248?s=200&v=4'
-              }
-            }
+    filteredPlugins () {
+      const q = this.query.trim().toLowerCase()
 
-            return owner
-          })
-        : []
+      if (!q) return PLUGINS
+
+      return PLUGINS.filter(plugin =>
+        plugin.name.toLowerCase().includes(q) ||
+        plugin.description.toLowerCase().includes(q)
+      )
     },
 
     content () {
-      return this.hit && this.hit.readme
-        ? markdown(this.hit.readme)
-        : ''
+      return this.readme ? markdown(this.readme) : ''
     }
   },
 
@@ -210,33 +213,37 @@ export default {
 
   methods: {
     async fetchCurrent () {
+      this.readme = ''
+
       if (!this.isSingle) {
+        this.hit = null
         return
       }
 
       const { id: name } = this.$route.params
-      const { results: [results] } = await searchClient.search([{
-        indexName: 'npm-search',
-        query: name
-      }])
+      this.hit = PLUGINS.find(plugin => plugin.name === name) || null
 
-      this.hit = results.hits.find(hit => hit.name === name)
+      // Render the README straight from GitHub raw (derived from the repository
+      // URL below). The npm registry doesn't populate a `readme` field for these
+      // packages, and the old Algolia npm-search index that used to supply it
+      // never indexed the @gridmix/* scope (see the note at the top of this file).
+      // Client-only; raw.githubusercontent.com sends permissive CORS.
+      const readmeUrl = this.hit && readmeUrlFor(this.hit.repository)
+
+      if (readmeUrl && process.isClient) {
+        try {
+          const res = await fetch(readmeUrl)
+          this.readme = res.ok ? await res.text() : ''
+        } catch (err) {
+          this.readme = ''
+        }
+      }
     },
 
     hitClasses (hit) {
       return {
         'plugin--active': this.hit && this.hit.name === hit.name
       }
-    },
-
-    repositoryIcon (repository) {
-      switch (repository.host) {
-        case 'github.com': GitHubLogo; break
-        case 'gitlab.com': GitLabLogo; break
-        case 'bitbucket.com': BitbucketLogo; break
-      }
-
-      return GitHubLogo
     }
   }
 }

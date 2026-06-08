@@ -31,8 +31,6 @@ module.exports = {
         whitelist: [
           /\.css$/,
           /\?vue&type=style/,
-          /vue-instantsearch/,
-          /instantsearch.js/,
           /typeface-league-spartan/
          ]
       }))

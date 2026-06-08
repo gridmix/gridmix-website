@@ -7,7 +7,8 @@
 
       <Nav class="flex-fit"/>
 
-      <SearchForm />
+<!-- Hide until the Gridsome docs are not indexed -->
+<!--      <SearchForm />-->
 
       <nav class="header-actions flex">
         <ToggleTheme />
@@ -108,7 +109,6 @@ export default {
 <style lang="scss">
 header {
   z-index: 20;
-  position: relative;
   top: 0;
   background-color: var(--bg-transparent);
   border-bottom: 1px solid var(--border-color);
@@ -132,6 +132,19 @@ header {
   .header-inner {
     padding: 0 var(--space);
     min-height: var(--header-height);
+    flex-wrap: nowrap;
+  }
+
+  @media screen and (max-width: 850px) {
+    .header-inner.gap-30 > * {
+      margin-right: 15px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .header-inner.gap-30 > * {
+      margin-right: 10px;
+    }
   }
 
   @media screen and (min-width: 992px) and (max-resolution: 1) {

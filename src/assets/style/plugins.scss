@@ -23,26 +23,18 @@
       margin-bottom: calc(var(--space) / 2);
     }
 
-    .ais-SearchBox-form {
+    &-input {
+      width: 100%;
       margin-bottom: 0;
-    }
+      padding: calc(var(--space) / 2.5) calc(var(--space) / 2);
+      border: 1px solid var(--border-color);
+      border-radius: 5px;
+      background: var(--bg);
+      color: var(--body-color);
 
-    .ais-SearchBox-input {
-      padding-left: calc(var(--space) / 2);
-    }
-
-    .ais-SearchBox-submit,
-    .ais-SearchBox-reset {
-      display: none;
-    }
-
-    .ais-PoweredBy {
-      margin-left: auto;
-
-      &-logo {
-        width: 120px !important;
-        filter: grayscale(100%);
-        opacity: .7;
+      &:focus {
+        border-color: var(--primary-color);
+        outline: none;
       }
     }
   }
@@ -57,14 +49,11 @@
   }
 
   &__list {
+    margin: 0;
     padding-bottom: 20px;
+    list-style: none;
 
-    .ais-InfiniteHits-list {
-      margin: 0;
-      list-style: none;
-    }
-
-    .ais-InfiniteHits-item {
+    .plugin {
       margin: 0;
     }
   }
