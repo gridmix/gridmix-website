@@ -15,6 +15,7 @@
             <span>Get started</span>
           </g-link>
         </p>
+        <ForkNotice />
 
         <p class="intro__info">
           <span>Open-source MIT Licensed. </span>
@@ -34,6 +35,15 @@ query {
 }
 </static-query>
 
+<script>
+import ForkNotice from '@/components/ForkNotice.vue'
+
+export default {
+  components: {
+    ForkNotice
+  }
+}
+</script>
 <style lang="scss">
 .intro {
   padding: calc(2% + var(--space)) 0;
@@ -65,6 +75,7 @@ query {
   }
 
   &__info {
+    margin-top: var(--space);
     font-size: .9rem;
   }
 
