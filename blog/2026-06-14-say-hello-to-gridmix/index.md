@@ -2,7 +2,7 @@
 title: Say hello to Gridmix 🐦‍🔥💚
 slug: say-hello-to-gridmix
 author: [fyodorio]
-date: 2026-06-14
+date: 2026-06-12
 tags: ['meta', 'build in public']
 excerpt: 'Gridmix is a revival fork of Gridsome aiming to resurrect the warm and fuzzy feeling around building static websites with less hassle and more satisfaction.'
 ---
