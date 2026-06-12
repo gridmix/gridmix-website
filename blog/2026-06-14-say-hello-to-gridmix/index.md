@@ -17,6 +17,6 @@ So that's how I came to [this fork](https://github.com/gridmix/gridmix), and so 
 
 My goals with Gridmix (_Gridsome + Remix = Gridmix_) are to at least avoid migrations for the latter in the foreseeable future and to maintain a [healthy small ecosystem](https://github.com/gridmix/gridmix/blob/main/docs/ECOSYSTEM.md) to avoid the ubiquitous security problems `npm` brought in recent years (*or even days*).
 
-If you have any feedback/suggestions, please provide it through [the core repository issues](https://github.com/gridmix/gridmix/issues), my [personal socials](https://fyodor.io/links), or via [ping@fyodor.io](mailto:ping@fyodor.io). 
+If you have any feedback/suggestions, please provide it through [the core repository issues](https://github.com/gridmix/gridmix/issues), my [personal socials](https://fyodor.io/links), or via [ping@fyodor.io](mailto:ping@fyodor.io).
 
 To be continued...
