@@ -7,53 +7,57 @@ tags: ['vue', 'design']
 excerpt: 'What if we had fixed Vue 2 instead of replacing it?'
 ---
 
-[intro]
+## Intro
 
-The official Vue documentary refers to notorious AngularJS to Angular 2 migration nightmare https://www.youtube.com/watch?v=OrxmtDw4pVI&t=1139s but Evan created the nightmare of their own with Vue 3. Developers who missed the intuitive ease-of-use and simplicity of Angular 1 felt completely abandoned. Vue came around at the perfect time to capture those migratory developers by offering the strength of React combined with the low barrier to entry of early Angular. This video talks a bit about that https://www.youtube.com/watch?v=F2koGTRw5yk&t=363s.
+The official Vue documentary refers to the notorious AngularJS to Angular 2 migration nightmare ([around here](https://www.youtube.com/watch?v=OrxmtDw4pVI&t=1139s)), but Evan created the nightmare of their own with Vue 3. Developers who missed the intuitive ease-of-use and simplicity of Angular 1 felt completely abandoned. Vue came around at the perfect time to capture those migratory developers by offering the strength of React combined with the low barrier to entry of early Angular ([a bit of that story](https://www.youtube.com/watch?v=F2koGTRw5yk&t=363s)).
 
-Vue 2 officially reached its End of Life (EOL) on December 31, 2023
+Vue 2 officially reached its End of Life on December 31, 2023 ([the note](https://blog.vuejs.org/posts/vue-2-eol)).
 
-Vue 3 is good. It was an opinionated and contradictory evolution. Composition API solved real problems. It also solved problems Vue 2 developers didn't have, at the cost of a model they liked. What if the next Vue had been an honest continuation instead? What if you could redesign next Vue from Vue 2 with today’s knowledge?
+Vue 3 is good. It was an opinionated and contradictory evolution. Composition API solved real problems. It also solved problems Vue 2 developers didn't have, at the cost of a model they liked. What if the next Vue had been an honest continuation instead? What if Vue 2 had simply gone on — 2.8, 2.9 — with the tools we have now, the same simple DSL, and a little more room to breathe?
 
-[what was the problem and what Vue 3 had done]
+A butterfly effect, not a revival project. Gridmix still sits on Vue 2 as a small monument to that warmer past, and it may well move to Vue 3 someday. The love doesn't depend on staying.
 
-The core conflict of the Vue 3 release came down to a clash of philosophies: Readability vs. Scalability.
+## What was the problem, and what Vue 3 did
 
-Because Vue 3 was a complete rewrite under the hood (switching from Object.defineProperty to ES6 Proxies for reactivity), it broke backward compatibility for a massive portion of the ecosystem. Major libraries like Vuetify, Nuxt, and Vuex took years to officially support Vue 3, forcing teams to linger on Vue 2 far longer than expected. Another article about doubts https://medium.com/js-dojo/vue-3-was-a-mistake-that-we-should-not-repeat-81cc65484954. And another https://dev.to/martinsotirov/vue-3-composition-api-the-wrong-solution-to-the-right-problem-1j6h.
-Hero devs research https://www.herodevs.com/blog-posts/what-it-really-takes-to-migrate-from-vue-2-to-vue-3
+Readability against a scalability story. Vue 2's component was a page you could read. Vue 3 asked you to redesign the page in order to deserve the scale.
 
-Vue 3 breaking changes (official) list https://v3-migration.vuejs.org/breaking-changes/, Evan talks about that https://www.youtube.com/watch?v=Vp5ANvd88x0&t=1448s
+The rewrite is the sore point: `Object.defineProperty` out, Proxies in, a new renderer, a new way to start an app, a [long list of breaking changes](https://v3-migration.vuejs.org/breaking-changes/) for a framework people chose because it was short. Even the compatibility build shrugged at the libraries that had grown into Vue 2's furniture ([migration build](https://v3-migration.vuejs.org/migration-build)). Vuetify, Nuxt, Vuex — years, not a summer. Vue 3 shipped in September 2020, became the default only in February 2022 ([that switch](https://blog.vuejs.org/posts/vue-3-as-the-new-default)), and Nuxt 3 and Vuetify 3 called themselves stable in November 2022 ([the year in review](https://blog.vuejs.org/posts/2022-year-in-review)). Teams didn't linger. They waited for home to be rebuilt.
 
-During his (rarely cited) keynote at Vue Fes Japan 2023, Evan You shared a candid, reflective post-mortem on the framework's major architectural shift.
+Other people felt the same shape of doubt: [a mistake not to repeat](https://medium.com/js-dojo/vue-3-was-a-mistake-that-we-should-not-repeat-81cc65484954), [the wrong solution to a real problem](https://dev.to/martinsotirov/vue-3-composition-api-the-wrong-solution-to-the-right-problem-1j6h), and later the long migration postmortems ([what it really takes](https://www.herodevs.com/blog-posts/what-it-really-takes-to-migrate-from-vue-2-to-vue-3)). Evan walked through the break himself ([around here](https://www.youtube.com/watch?v=Vp5ANvd88x0&t=1448s)). At Vue Fes Japan 2023 he was more candid: too many breaking changes in one release, the ecosystem underestimated, too much shipped at once ([the keynote](https://www.youtube.com/watch?v=M3BM9TB-8yA), [a same-day note](https://tech.giftee.co.jp/entry/2023/10/28/101724)). The migration he had watched Angular inflict, he later described in his own project. That's the door into the daydream.
 
-[what Vue 2 got right, or the hook]
+## What Vue 2 got right
 
-`this` as a contract. Options as a schema. Greppable components. Warm DX. Admit the real weaknesses — mixins, `Object.defineProperty`, weak template types — in one paragraph, not a section.
+`this` as a contract. Options as a schema. A component you can grep. `data`, `computed`, `methods`, `mounted` — named rooms in a house you already know.
 
-[under the hood of the fantasy]
+The template was a DSL, not a language you had to deserve. You described the screen. The framework met you there. Warm DX is a new person opening a `.vue` file and knowing where to look. Gridmix still feels like that. A static site should not require a composition seminar.
 
-One line per idea, no subsections:
+The weaknesses, in one breath, so the nostalgia isn't amnesia: two mixins could bring the same `loading` and the merge would quietly pick a winner, getter/setter reactivity had holes, a huge options object got tiring, template types were a shrug. Implicitness itself was not the sin. None of that asked for a new religion. It asked for better tools, and the tools were on their way — faster bundlers, a language server, a compiler that could finally see the template.
 
-* Signals under the hood, this on the surface
-* Vapor-style compiler, no VDOM diff
-* Typed pipes instead of filters (Angular's fix, borrowed)
-* Behaviors for reuse, composables still available
-* asyncData instead of Suspense
-* TSX as the fully-typed path
-* The compiler is optional; the runtime is the framework
+## Under the hood of the fantasy
 
-[cost analysis of the fantasy implementation]
+Same habits. Faster underneath. A little more flexible. Not a new animal.
 
-EOL maintenance, ecosystem gravity, Volar 1.x frozen, no security patches, trademark. One paragraph, blunt.
+- **Signals under the hood, `this` on the surface.** You still write `this.count++`. Something finer than a blunt re-render notices. Solid showed the mood; Vue itself later went looking, and called the expedition Vapor. In this timeline it arrives as an implementation detail, not a new API to learn.
+- **A Vapor-style compiler, much less VDOM diffing.** The template was always a gift to a compiler. Svelte and Solid compiled their way out of the diff; Vue eventually [sketched the same wish](https://blog.vuejs.org/posts/2022-year-in-review). Here it is just how a Vue 2.8 template renders. The script-tag runtime stays, for the pages that don't want a build step. The compiler is a kindness. The runtime is the framework.
+- **Typed pipes instead of deleted filters.** `{{ price | currency }}` was a small joy. Vue 3 threw filters out ([removed](https://v3-migration.vuejs.org/breaking-changes/filters)) and told you to call a method. Angular grew the same idea into pipes instead of mourning it. 2.8 keeps the pipe, gives it an import and a type, and lets the compiler fold it in. Presentation stays in the template, where it was readable.
+- **Mixins stay. Composables if you want them.** A mixin is implicit on purpose: you list it, and its `data`, `computed`, `methods`, and hooks show up on `this` as if they had always lived there. That is the habit. You write `this.formatDate` and you are done. The trouble was never the implicitness. It was a collision you cannot see — two guests both bring `loading`, the merge quietly picks a winner, and six months later the component file does not contain the word. A "behavior," if the daydream wants one, is only a mixin with its name still on the guest list, so devtools can point when two of them brought the same key. If that label feels like paperwork, skip it. Plain mixins already are the romantic feature. Composables remain a side door for the helper used by forty screens, with its own watchers, that you want to call twice in one component. Useful. Not the front door. Not the identity.
+- **`asyncData` instead of Suspense.** Nuxt 2 already had the humane version: a place on the page that says what data it needs, then merges it into the component you already understand ([async data](https://nuxt.com/docs/2.x/getting-started/data-fetching)). Vue 3 reached for `<Suspense>` and left it experimental. The kinder branch lifts the thing people already liked.
+- **Strict templates, still templates.** Angular type-checks its own DSL without turning it into TypeScript. `strictTemplates` looks at `{{ }}`, inputs, `$event`, `*ngFor` locals, and pipes, and the compiler does the translation behind the curtain so TypeScript can complain in the template ([how strict mode checks](https://angular.dev/tools/cli/template-typecheck)). Vue 2.8 could have the same kindness: a misspelled `this.count`, a prop of the wrong shape, a `v-for` item treated as a string when it is a post. The editor underlines the template. The author keeps writing the template. No TSX, no `setup()`, no new grammar to deserve types.
+- **The nice extras, without a new identity.** Fragments. Teleport. A style block that can see component state — CSS `v-bind`, which even [found its way back into 2.7](https://blog.vuejs.org/posts/vue-2-7-naruto), proof that some delights fit the old house.
+- **Faster tools, not a personality change.** The 2020s handed everyone a faster dev server. Vite, yes, but also Rspack, Parcel, Turbopack, esbuild, SWC — a whole generation of bundlers, many of them Rust, some Go, all of them mighty enough that "the build is slow" stopped being a reason to rewrite a framework. A language server could love a `.vue` file too. None of that required `setup()`. A Vue 2 that stayed could have taken the tools and remained itself.
 
-[performance implications]
+## Performance, said softly
 
-Signals beat VDOM diffs. Compiler tree-shaking beats module tree-shaking. The fork can match Vue 3 on speed and size. The real loss isn't performance — it's ecosystem.
+Nobody here is chasing a perfect score. Bearable would have been enough. Maybe even catching Vue 3, who knows — the [3.0 announcement](https://blog.vuejs.org/posts/vue-3-one-piece) was proud of its numbers, and a smarter compiler, signals, and that new generation of tools could have gone a long way without asking the author to change how a component feels.
 
-[meta-lesson]
+The loss that stings isn't a benchmark. It's that "faster" became a reason to stop being the framework people loved, and to grow a fancy Angular-like performance machine instead.
 
-The question "what if we'd fixed it instead of replacing it" is worth asking, even for frameworks you love.
+## Meta-lesson
 
-[conclusion]
+The question "what if we'd fixed it instead of replacing it" is worth asking, even for a framework you love. Especially then.
 
-Composition API made Vue more powerful and less itself. That trade may have been worth it. It was still a trade.
+## Conclusion
+
+Composition API made Vue more powerful and less itself. That trade may have been worth it for some teams. It was still a trade.
+
+Evan could have done better, years ago. We might have had the good old framework now — quicker, kinder, still itself. A framework developers would actually love.
