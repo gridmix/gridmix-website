@@ -7,6 +7,10 @@ tags: ['vue', 'design']
 excerpt: 'What if we had fixed Vue 2 instead of replacing it?'
 ---
 
+> "We all want progress. But progress means getting nearer to the place where you want to be. And if you have taken a wrong turning, then to go forward does not get you any nearer. If you are on the wrong road, progress means doing an about-turn and walking back to the right road; and in that case the man who turns back soonest is the most progressive."
+>
+> C. S. Lewis
+
 ## Intro
 
 The official Vue documentary refers to the notorious AngularJS to Angular 2 migration nightmare ([around here](https://www.youtube.com/watch?v=OrxmtDw4pVI&t=1139s)), but Evan created the nightmare of their own with Vue 3. Developers who missed the intuitive ease-of-use and simplicity of Angular 1 felt completely abandoned. Vue came around at the perfect time to capture those migratory developers by offering the strength of React combined with the low barrier to entry of early Angular ([a bit of that story](https://www.youtube.com/watch?v=F2koGTRw5yk&t=363s)).
