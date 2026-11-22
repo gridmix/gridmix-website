@@ -2,7 +2,7 @@
 title: "Vue.js 2.8: the framework Vue 3 could have been"
 slug: the-framework-vue-3-could-have-been
 author: [fyodorio]
-date: 2026-10-17
+date: 2026-11-23
 tags: ['vue', 'design']
 excerpt: 'What if we had fixed Vue.js 2 instead of replacing it?'
 ---
